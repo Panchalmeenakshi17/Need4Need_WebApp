@@ -6,7 +6,9 @@ router.post("/signup", (req, res) => {
   const {
     Donatorname,
     DonatorEmail,
+    Donatorpincode,
     Donatorphone,
+    Donatormessage,
     DonatorPassword,
     DonatorConfirmpassword,
   } = req.body;
@@ -14,7 +16,9 @@ router.post("/signup", (req, res) => {
   const newDonator = new Donator({
     Donatorname,
     DonatorEmail,
+    Donatorpincode,
     Donatorphone,
+    Donatormessage,
     DonatorPassword,
     DonatorConfirmpassword,
   });
@@ -39,7 +43,9 @@ router.post("/login", async (req, res) => {
       const currentDonator = {
         Donatorname: donator[0].Donatorname,
         DonatorEmail: donator[0].DonatorEmail,
+        Donatorpincode: donator[0].Donatorpincode,
         Donatorphone: donator[0].Donatorphone,
+        Donatormessage: donator[0].Donatormessage,
         DonatorPassword: donator[0].DonatorPassword,
 
         _id: donator[0]._id,
@@ -82,6 +88,7 @@ router.post("/adddonator", async (req, res) => {
     const newdonator = new Donator({
       Donatorname: donator.Donatorname ,
     DonatorEmail: donator.DonatorEmail ,
+    Donatormessage: donator.Donatormessage ,
     Donatorphone: donator.Donatorphone ,
     DonatorPassword: donator.DonatorPassword
       });
@@ -102,15 +109,16 @@ router.post('/getdonatorbyid',async (req,res) => {
   }
 });
 router.post('/updateddonator',async (req,res) => {
-  const updateDonator = req.body.updateDonator;
+  const updatedDonator = req.body.updatedDonator;
   try {
-       const donator = await Donator.findOne({_id:updateDonator._id});
+       const donator = await Donator.findOne({_id:updatedDonator._id});
        
        
-       donator.Donatorname = updateDonator.Donatorname;
-       donator.DonatorEmail = updateDonator.DonatorEmail;
-       donator.Donatorphone = updateDonator.Donatorphone;
-       donator.DonatorPassword = updateDonator.DonatorPassword;
+       donator.Donatorname = updatedDonator.Donatorname;
+       donator.DonatorEmail = updatedDonator.DonatorEmail;
+       donator.Donatormessage = updatedDonator.Donatormessage;
+       donator.Donatorphone = updatedDonator.Donatorphone;
+       donator.DonatorPassword = updatedDonator.DonatorPassword;
        
        await donator.save();
        res.status(200).send('Donator Updated Successfully');

@@ -39,6 +39,10 @@ const  ngoSchema = mongoose.Schema(
     NgoaltPNumber: {
         type: Number,
         required: [true, 'Alternative Phone number is required']
+    },
+    NgoComment: {
+        type: String,
+        required: [true, 'Comment is required']
     }
   },
   { timeStamps: true }

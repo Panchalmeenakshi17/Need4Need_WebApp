@@ -35,7 +35,7 @@ function LoginDonator() {
       setDonatorEmail(""); //dispactcher ka kam hota hai process ko initial se running state mai leke jaana
       setDonatorPassword("");
 
-      toast.success("Logged In successfully");
+      // toast.success("Logged In successfully");
       // navigate("/");
     }
   };

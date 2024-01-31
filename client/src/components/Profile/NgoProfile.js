@@ -95,7 +95,7 @@ const NgoProfile = () => {
                         
                         {/* <h1>Password &nbsp;:&nbsp; {currentNgo.riderPassword}</h1>   */}
                         <div className=" flex justify-center p-8 ">
-                          <NavLink to="/editdriver">
+                          <NavLink to="/EditNgo">
                             <button className="bg-blue-600 p-3 rounded-full text-lg text-white">
                               Edit Ngo Details
                             </button>

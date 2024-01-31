@@ -1,7 +1,7 @@
 import {createStore,combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
-import { addNgoReducer, getAllNgosReducer, getNgoByIdReducer, loginNgoReducer, ngoSignupReducer } from './reducers/ngoReducer';
+import { addNgoReducer, getAllNgosReducer, getNgoByIdReducer, loginNgoReducer, ngoSignupReducer, updateNgoByIdReducer } from './reducers/ngoReducer';
 import { addDonatorReducer, donatorSignupReducer, getAllDonatorsReducer, getDonatorByIdReducer, loginDonatorReducer, updateDonatordByIdReducer } from './reducers/donatorReducer';
 import { loginAdminReducer } from './reducers/adminReducer';
 
@@ -20,6 +20,7 @@ const rootReducer = combineReducers({
     getAllNgosReducer,
     addNgoReducer,
     getNgoByIdReducer,
+    updateNgoByIdReducer,
 
     //Donator
     donatorSignupReducer,

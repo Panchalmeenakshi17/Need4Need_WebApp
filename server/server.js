@@ -22,7 +22,7 @@ app.get('/',(req,res) => {
     res.send('<h1>Hello From Node Server Via Nodemon</h1>');
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 app.listen(port, () => {
     console.log(`Server Running On ${process.env.NODE_ENV} Mode And On Port ${port}`.bgMagenta.white);

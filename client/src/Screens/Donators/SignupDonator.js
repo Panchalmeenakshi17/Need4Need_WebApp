@@ -29,7 +29,9 @@ const SignupDonator = () => {
 
   const [Donatorname, setDonatorname] = useState("");
   const [DonatorEmail, setDonatorEmail] = useState("");
+  const [Donatorpincode, setDonatorpincode] = useState("");
   const [Donatorphone, setDonatorphone] = useState("");
+  const [Donatormessage, setDonatormessage] = useState("");
   const [DonatorPassword, setDonatorPassword] = useState("");
   const [DonatorConfirmpassword, setDonatorConfirmpassword] = useState("");
   // let navigate = useNavigate();
@@ -60,6 +62,7 @@ const SignupDonator = () => {
   if (
     Donatorname.trim() === "" ||
     DonatorEmail.trim() === "" ||
+    Donatorpincode.trim() === "" ||
     Donatorphone.trim() === "" ||
     DonatorPassword.trim() === ""||
     DonatorConfirmpassword.trim() === "" 
@@ -73,7 +76,9 @@ const SignupDonator = () => {
     const donator = {
       Donatorname,
       DonatorEmail,
+      Donatorpincode,
       Donatorphone,
+      Donatormessage,
       DonatorPassword,
       DonatorConfirmpassword,
     };
@@ -81,11 +86,13 @@ const SignupDonator = () => {
     setDonatorname("");
     setDonatorEmail("");
     setDonatorphone("");
+    setDonatormessage("");
+    setDonatorpincode("");
     setDonatorPassword("");
     setDonatorConfirmpassword("");
-    toast.success("Account created successfully! Please login to continue.", {
-      position: "top-center",
-    });
+    // toast.success("Account created successfully!.", {
+    //   position: "top-center",
+    // });
     // navigate("/LoginDonator");
   }
 };
@@ -168,7 +175,20 @@ const SignupDonator = () => {
                         />
                       </label>
                     </div>
-                    <div className="w-full md:w-full p-3">
+                    <div className="w-full md:w-1/2 p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="number"
+                          value={Donatorpincode}
+                          required="TRUE"
+                          onChange={(e) => setDonatorpincode(e.target.value)}
+                          placeholder="Pincode*"
+                        />
+                      </label>
+                    </div>
+                    <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
                           className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
@@ -178,6 +198,19 @@ const SignupDonator = () => {
                           required="TRUE"
                           onChange={(e) => setDonatorphone(e.target.value)}
                           placeholder="Phone Number*"
+                        />
+                      </label>
+                    </div>
+                    <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="text"
+                          value={Donatormessage}
+                          required="TRUE"
+                          onChange={(e) => setDonatormessage(e.target.value)}
+                          placeholder="Any Message you want to Deliver"
                         />
                       </label>
                     </div>

@@ -37,6 +37,8 @@ import AddNgo from "./components/AdminPortal/AddNgo";
 import NgoProfile from "./components/Profile/NgoProfile";
 import DonatorProfile from "./components/Profile/DonatorProfile";
 import EditDonator from "./components/Edit/EditDonator";
+import EditNgo from "./components/Edit/EditNgo";
+import NotFound from "./components/NotFound/NotFound";
 
 
 
@@ -89,6 +91,7 @@ const App = () => {
             <Route exact path="/Footer2" element={<Footer2 />} />
             <Route exact path="/DonatorProfile" element={<DonatorProfile />} />
             <Route exact path="/EditDonator" element={<EditDonator />} />
+            <Route path="*" element={<NotFound />} />
             
           </Routes>
         </>
@@ -109,6 +112,8 @@ const App = () => {
             <Route exact path="/Footer" element={<Footer />} />
             <Route exact path="/Footer2" element={<Footer2 />} />
             <Route exact path="/NgoProfile" element={<NgoProfile/>} />
+            <Route exact path="/EditNgo" element={<EditNgo/>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </>
       ) : currentAdmin ? (
@@ -121,6 +126,7 @@ const App = () => {
             <Route exact path="/AdminNgoList" element={<AdminNgoList/>} />
             <Route exact path="/AddDonator" element={<AddDonator/>} />
             <Route exact path="/AddNgo" element={<AddNgo/>} />
+            <Route path="*" element={<NotFound />} />
             
           
             
@@ -153,6 +159,7 @@ const App = () => {
             <Route exact path="/Login" element={<Login />} />
             <Route exact path="/Footer2" element={<Footer2 />} />
             <Route exact path="/Footer" element={<Footer />} />
+             <Route path="*" element={<NotFound />} />
           </Routes>
         
         </>

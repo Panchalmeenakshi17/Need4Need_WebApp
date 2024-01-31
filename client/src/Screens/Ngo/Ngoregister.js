@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { ngoRegister } from "../../actions/ngoActions";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { signNgo } from "../../actions/ngoActions";
 import Fade from "react-reveal/Fade";
+
 
 const Ngoregister = () => {
 
@@ -44,70 +42,58 @@ const Ngoregister = () => {
   }, []);
 
 
-
-  const [organizationName, setOrganizationName] = useState("");
-  const [organizationEmail, setOrganizationEmail] = useState("");
-  const [organizationPhone1, setOrganizationPhone1] = useState("");
-  const [organizationPhone2, setOrganizationPhone2] = useState("");
-  const [organizationCountry, setOrganizationCountry] = useState("");
-  const [organizationState, setOrganizationState] = useState("");
-  const [organizationCity, setOrganizationCity] = useState("");
-  const [organizationAddress, setOrganizationAddress] = useState("");
-  const [organizationComment, setOrganizationComment] = useState("");
-  const [organizationPostcode, setOrganizationPostcode] = useState("");
+  const [Ngoname, setNgoname] = useState("");
+  const [Ngoemail, setNgoemail] = useState("");
+  const [NgoAddress, setNgoAddress] = useState("");
+  const [NgoState, setNgoState] = useState("");
+  const [NgoCity, setNgoCity] = useState("");
+  const [NgoPincode, setNgoPincode] = useState("");
+  const [Ngopassword, setNgopassword] = useState("");
+  const [NgoPNumber, setNgoPNumber] = useState("");
+  const [NgoaltPNumber, setNgoaltPNumber] = useState("");
+  const [NgoComment, setNgoComment] = useState("");
+  // let navigate = useNavigate();
 
   const dispatch = useDispatch();
 
-  const submitNgoData = async (e) => {
+  const submitSignup = async (e) => {
     e.preventDefault();
-    if (
-      organizationName === "" ||
-      organizationEmail === "" ||
-      organizationPhone1 === "" ||
-      organizationPhone2 === "" ||
-      organizationCountry === "" ||
-      organizationState === "" ||
-      organizationCity === "" ||
-      organizationAddress === "" ||
-      organizationPostcode === ""
-    ) {
-      toast.warn("Please fill all the fields!!", {
+
+    if (Ngoname.trim() === "" || Ngoemail.trim() === "" || NgoAddress.trim() === "" ||NgoState.trim() === "" ||NgoCity.trim() === "" ||NgoPincode.trim() === "" ||Ngopassword.trim() === "" ||NgoPNumber.trim() === ""||NgoaltPNumber.trim() === "" ) {
+      toast.warn("Please fill out all required fields.", {
         position: "top-center",
       });
     } else {
-      const ngoData = {
-        organizationName,
-        organizationEmail,
-        organizationPhone1,
-        organizationPhone2,
-        organizationCountry,
-        organizationState,
-        organizationCity,
-        organizationAddress,
-        organizationComment,
-        organizationPostcode,
-      };
-      // dispatch(ngoRegister(ngoData));
-
-      setOrganizationName("");
-      setOrganizationEmail("");
-      setOrganizationPhone1("");
-      setOrganizationPhone2("");
-      setOrganizationCountry("");
-      setOrganizationState("");
-      setOrganizationCity("");
-      setOrganizationAddress("");
-      setOrganizationComment("");
-      setOrganizationPostcode("");
-      toast.success("We will contact you soon! You can now move to Homepage", {
-        position: "top-center",
-      });
+      const ngo = { Ngoname,Ngoemail,NgoAddress, NgoState, NgoCity, NgoPincode,  Ngopassword,NgoPNumber,NgoaltPNumber,NgoComment };
+      dispatch(signNgo(ngo));
+      setNgoname("");
+      setNgoemail("");
+      setNgoAddress("");
+      setNgoState("");
+      setNgoCity("");
+      setNgoPincode("");
+      setNgopassword("");
+      setNgoPNumber("");
+      setNgoaltPNumber("");
+      setNgoComment("");
+      // toast.success("Account created successfully!", {
+      //   position: "top-center",
+      // });
+      // navigate("/Entry");
     }
   };
+
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = (event) => {
+    event.preventDefault();
+    setIsPasswordVisible(!isPasswordVisible);
+  };
+  
   return (
     <>
       <motion.div
-        className="bg-gradient-to-tr relative md:h-full h-[1600px] from-[#4b4886] via-[#100e35] to-[#545197]"
+        className="bg-gradient-to-tr relative md:h-full h-[1700px] from-[#4b4886] via-[#100e35] to-[#545197]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 6 }}
         exit={{ opacity: 0 }}
@@ -152,170 +138,207 @@ const Ngoregister = () => {
                   <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <form className="   space-y-4 md:space-y-6">
                       <Fade bottom distance="20%">
-                        <div>
-                          <label className="block md:mb-2 font-SourceSansPro  font-bold  text-md text-[#ffffff]     ">
-                            Organisation Name
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationName}
-                            onChange={(e) =>
-                              setOrganizationName(e.target.value)
-                            }
-                            className=" border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black] "
-                            placeholder="Name"
-                          />
-                        </div>
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-1"
+                          type="text"
+                          value={Ngoname}
+                          onChange={(e) => setNgoname(e.target.value)}
+                          required="TRUE"
+                          placeholder="Organisation Name*"
+                        />
+                      </label>
+                    </div>
+                      </Fade>
+                      
+                      <Fade bottom distance="20%">
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="email"
+                          value={Ngoemail}
+                          required="TRUE"
+                          onChange={(e) => setNgoemail(e.target.value)}
+                          placeholder="Organisation Email Address*"
+                        />
+                      </label>
+                    </div>
                       </Fade>
                       <Fade bottom distance="20%">
-                        <div>
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]    ">
-                            Organisation Email
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="email"
-                            value={organizationEmail}
-                            onChange={(e) =>
-                              setOrganizationEmail(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="abc@gmail.com"
-                          />
-                        </div>
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-1"
+                          type="text"
+                          value={NgoAddress}
+                          onChange={(e) => setNgoAddress(e.target.value)}
+                          required="TRUE"
+                          placeholder="Organisation Address*"
+                        />
+                      </label>
+                    </div>
+                      </Fade>
+                      <Fade>
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="text"
+                          value={NgoState}
+                          required="TRUE"
+                          onChange={(e) => setNgoState(e.target.value)}
+                          placeholder="Organisation State*"
+                        />
+                      </label>
+                    </div>
                       </Fade>
                       <Fade bottom distance="20%">
-                        <div className=" md:flex gap-[10px]">
-                          <label className=" font-SourceSansPro  block mb-2 font-bold  text-md text-[#ffffff]   ">
-                            Organisation Phone
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="number"
-                            value={organizationPhone1}
-                            onChange={(e) =>
-                              setOrganizationPhone1(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="9999XXXXXX"
-                          />
-                          <label className=" font-SourceSansPro  block mb-2 font-bold  text-md text-[#ffffff]   ">
-                            Organisation Alternate Phone
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="number"
-                            value={organizationPhone2}
-                            onChange={(e) =>
-                              setOrganizationPhone2(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="9999XXXXXX"
-                          />
-                        </div>
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-1"
+                          type="text"
+                          value={NgoCity}
+                          onChange={(e) => setNgoCity(e.target.value)}
+                          required="TRUE"
+                          placeholder="Organisation City*"
+                        />
+                      </label>
+                    </div>
                       </Fade>
                       <Fade bottom distance="20%">
-                        <div className=" md:flex gap-[10px] ">
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]  ">
-                            Organisation Country
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationCountry}
-                            onChange={(e) =>
-                              setOrganizationCountry(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="Country"
-                          />
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]  ">
-                            Organisation State
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationState}
-                            onChange={(e) =>
-                              setOrganizationState(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="State"
-                          />
-                        </div>
+                      <div className="w-full md:w-full p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="number"
+                          value={NgoPincode}
+                          required="TRUE"
+                          onChange={(e) => setNgoPincode(e.target.value)}
+                          placeholder="Organisation Pincode*"
+                        />
+                      </label>
+                    </div>
                       </Fade>
                       <Fade bottom distance="20%">
-                        <div className=" md:flex gap-[10px]">
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]  ">
-                            Organisation City
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationCity}
-                            onChange={(e) =>
-                              setOrganizationCity(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="City"
-                          />
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]  ">
-                            Organisation Pincode
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="number"
-                            value={organizationPostcode}
-                            onChange={(e) =>
-                              setOrganizationPostcode(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="Pincode"
-                          />
-                        </div>
+                      <div className="w-full md:w-full p-3">
+                      <input
+                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        type="number"
+                        value={NgoPNumber}
+                        required
+                        onChange={(e) => setNgoPNumber(e.target.value)}
+                        placeholder="Organisation Phone Number*"
+                      />
+                    </div>
                       </Fade>
-                      <Fade bottom distance="20%">
-                        <div>
-                          <label className="block mb-2 font-SourceSansPro font-bold  text-md text-[#ffffff]  ">
-                            Organisation Address
-                            <span className=" text-red-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationAddress}
-                            onChange={(e) =>
-                              setOrganizationAddress(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="Address"
-                          />
-                        </div>
+                      <Fade>
+                      <div className="w-full md:w-full p-3">
+                      <input
+                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        type="number"
+                        value={NgoaltPNumber}
+                        required
+                        onChange={(e) => setNgoaltPNumber(e.target.value)}
+                        placeholder="Alternative Phone Number*"
+                      />
+                    </div>
                       </Fade>
-                      <Fade bottom distance="20%">
-                        <div>
-                          <label className=" font-SourceSansPro  block mb-2 font-bold  text-md text-[#ffffff]     ">
-                            Anything you want to share (Optional)
-                          </label>
-                          <input
-                            type="text"
-                            value={organizationComment}
-                            onChange={(e) =>
-                              setOrganizationComment(e.target.value)
-                            }
-                            className="border border-gray-300 text-[#000000] font-bold font-SourceSansPro  sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#ffffff71] dark:border-gray-600 placeholder:text-[black]"
-                            placeholder="eg: We have transport facility for food pickup ....."
-                          />
-                        </div>
+                      <Fade>
+                      <div className="p-3 w-full">
+                      <label className="block relative">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          type={isPasswordVisible ? "text" : "password"}
+                          value={Ngopassword}
+                          required
+                          onChange={(e) => setNgopassword(e.target.value)}
+                          placeholder="Password*"
+                        />
+                        <button
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {isPasswordVisible ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              className="text-[#f0f7ff] w-6 h-6"
+                            >
+                              {/* Eye icon for showing password */}
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                              />
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              className="text-[#f0f7ff] w-6 h-6"
+                            >
+                              {/* Closed eye icon for hiding password */}
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                              />
+                            </svg>
+                          )}
+                        </button>
+                      </label>
+                    </div>
                       </Fade>
-                      <button
+                      <Fade>
+                      <div className="w-full md:w-full p-3">
+                      <input
+                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        type="text"
+                        value={NgoComment}
+                        required
+                        onChange={(e) => setNgoComment(e.target.value)}
+                        placeholder="Anything You wanna Say"
+                      />
+                    </div>
+                      </Fade>
+                      {/* <button
                         onClick={submitNgoData}
                         type="button"
                         className="w-full shadow-inner shadow-green-800 text-white bg-[#30c04a91] hover:bg-green-500 transform ease-in-out duration-300 hover:font-bold hover:text-black focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-xl text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-SourceSansPro "
                       >
                         Send
-                      </button>
+                      </button> */}
                     </form>
+                    <div className="w-full flex justify-center p-3">
+                      <button
+                        type="button"
+                        onClick={submitSignup}
+                        className=" translate-x-[10px] transform delay-50 bg-[#328cc141] ease-in inline-block rounded bg-primary border-2 md:hover:bg-[#73a9c8fe] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                      >
+                        Register your Ngo
+                      </button>
+                      <br />
+                    </div>
                   </div>
                 </div>
               </div>

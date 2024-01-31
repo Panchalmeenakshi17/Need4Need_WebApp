@@ -30,6 +30,8 @@ const AddDonator = () => {
 
   const [Donatorname, setDonatorname] = useState("");
   const [DonatorEmail, setDonatorEmail] = useState("");
+  const [Donatorpincode, setDonatorpincode] = useState("");
+
   const [Donatorphone, setDonatorphone] = useState("");
   const [DonatorPassword, setDonatorPassword] = useState("");
 
@@ -64,6 +66,7 @@ const AddDonator = () => {
     if (
       Donatorname.trim() === "" ||
       DonatorEmail.trim() === "" ||
+      Donatorpincode.trim() === "" ||
       Donatorphone.trim() === "" ||
       DonatorPassword.trim() === ""
     ) {
@@ -84,12 +87,14 @@ const AddDonator = () => {
       const donator = {
         Donatorname,
         DonatorEmail,
+        Donatorpincode,
         Donatorphone,
         DonatorPassword,
       };
       dispatch(addDonator(donator));
       setDonatorname("");
       setDonatorEmail("");
+      setDonatorpincode("");
       setDonatorphone("");
       setDonatorPassword("");
 
@@ -166,6 +171,19 @@ const AddDonator = () => {
                           required="TRUE"
                           onChange={(e) => setDonatorEmail(e.target.value)}
                           placeholder="Email Address*"
+                        />
+                      </label>
+                    </div>
+                    <div className="w-full md:w-1/2 p-3">
+                      <label className="block">
+                        <input
+                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          id="signUpInput1-2"
+                          type="number"
+                          value={Donatorpincode}
+                          required="TRUE"
+                          onChange={(e) => setDonatorpincode(e.target.value)}
+                          placeholder="Pincode*"
                         />
                       </label>
                     </div>

@@ -13,6 +13,7 @@ router.post("/signup", (req, res) => {
     Ngopassword,
     NgoPNumber,
     NgoaltPNumber,
+    NgoComment,
   } = req.body;
 
   const newNgo = new Ngo({
@@ -25,6 +26,7 @@ router.post("/signup", (req, res) => {
     Ngopassword,
     NgoPNumber,
     NgoaltPNumber,
+    NgoComment,
   });
   try {
     newNgo.save();
@@ -119,6 +121,37 @@ router.post('/getngobyid',async (req,res) => {
        res.send(ngo);
   } catch (error) {
        res.json({message : error});
+  }
+});
+
+
+router.post('/updatedngo',async (req,res) => {
+  const updatedNgo = req.body.updatedNgo;
+  try {
+       const ngo = await Ngo.findOne({_id:updatedNgo._id});
+       ngo.Ngoname = updatedNgo.Ngoname;
+       ngo.Ngoemail = updatedNgo.Ngoemail;
+       ngo.NgoAddress = updatedNgo.NgoAddress;
+       ngo.NgoState = updatedNgo.NgoState;
+       ngo.NgoCity = updatedNgo.NgoCity;
+       ngo.NgoPincode = updatedNgo.NgoPincode;
+       ngo.Ngopassword = updatedNgo.Ngopassword;
+       ngo.NgoPNumber = updatedNgo.NgoPNumber;
+       ngo.NgoaltPNumber = updatedNgo.NgoaltPNumber;
+       await ngo.save();
+       res.status(200).send('NGO Updated Successfully');
+  } catch (error) {
+       res.status(400).json({message : error});
+  }
+});
+
+router.post('/deletedngo',async (req,res) => {
+  const ngoId = req.body.ngoId;
+  try {
+       await Ngo.findOneAndDelete({_id:ngoId});
+       res.status(200).send('Ngo Deleted Successfully');
+  } catch (error) {
+       res.status(404).json({message : error});
   }
 });
 

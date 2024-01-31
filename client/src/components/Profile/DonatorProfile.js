@@ -10,6 +10,8 @@ import { getDonatorById } from "../../actions/donatorAction";
 const DonatorProfile = () => {
   const [Donatorname, setDonatorname] = useState("");
   const [DonatorEmail, setDonatorEmail] = useState("");
+  const [Donatorpincode, setDonatorpincode] = useState("");
+
   const [Donatorphone, setDonatorphone] = useState("");
   const [DonatorPassword, setDonatorPassword] = useState("");
 
@@ -24,10 +26,11 @@ const DonatorProfile = () => {
   useEffect(() => {
     if (donator) {
       if (donator._id === currentDonator._id) {
-        setDonatorname();
-        setDonatorEmail();
-        setDonatorphone();
-        setDonatorPassword();
+        setDonatorname(donator.Donatorname);
+        setDonatorEmail(donator.DonatorEmail);
+        setDonatorpincode(donator.Donatorpincode);
+        setDonatorphone(donator.Donatorphone);
+        setDonatorPassword(donator.DonatorPassword);
       } else {
         dispatch(getDonatorById(currentDonator._id));
       }
@@ -41,8 +44,8 @@ const DonatorProfile = () => {
       <div className=" relative">
         <div className="">
           <img
-            src="https://images.unsplash.com/photo-1557264322-b44d383a2906?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className=" w-full h-full "
+            src="https://images.unsplash.com/photo-1651527567593-32c04202ed85?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className=" md:h-[800px] w-full h-full "
             alt=""
           />
         </div>
@@ -57,7 +60,7 @@ const DonatorProfile = () => {
               <div className="font-scnd  w-full   justify-center   absolute mt-10 left-0">
                 <div className="md:flex  md:flex-row flex-col md:space-y-0 space-y-10 md:justify-center">
                   <div className="md:w-1/2 w-full md:px-0 px-4  flex justify-center">
-                    <div className="bg-[8da98077] shadow-[#78b774] backdrop-blur-md shadow-md border-2 border-green-300 text-white flex flex-col gap-10 py-10 p-10 rounded-3xl  text-left text-2xl md:w-full w-full items-center">
+                    <div className="bg-[8da98077] shadow-[#78b774] backdrop-blur-md shadow-md border-2 border-green-300 text-[#000000] flex flex-col gap-10 py-10 p-10 rounded-3xl  text-left text-2xl md:w-full w-full items-center">
                       <h1 className="md:text-5xl text-4xl text-green-400  ">
                         Your Donator Profile
                       </h1>
@@ -66,17 +69,18 @@ const DonatorProfile = () => {
                         alt="Passenger Icon"
                         className="w-1/6 rounded-full"
                       />
-                      <div className="w-full md:px-10 pl-4">
+                      <div className="w-full text-[black] md:px-10 pl-4">
                         <h1>Name   &nbsp;:&nbsp; {Donatorname}</h1>
                         <h1>Your Donator's ID &nbsp;:&nbsp; {currentDonator._id}</h1>
 
                         <h1>Email &nbsp;:&nbsp; {DonatorEmail}</h1>
+                        <h1>Pincode &nbsp;:&nbsp; {Donatorpincode}</h1>
                        <h1>Password &nbsp;:&nbsp; {DonatorPassword}</h1>
                         <h1>Phone Number &nbsp;:&nbsp; {Donatorphone}</h1>
                                             
                         {/* <h1>Password &nbsp;:&nbsp; {currentNgo.riderPassword}</h1>   */}
                         <div className=" flex justify-center p-8 ">
-                          <NavLink to="/editDonator">
+                          <NavLink to="/EditDonator">
                             <button className="bg-blue-600 p-3 rounded-full text-lg text-white">
                               Edit Donator Details
                             </button>

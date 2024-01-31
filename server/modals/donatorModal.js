@@ -11,9 +11,17 @@ const  donatorSchema = mongoose.Schema(
         type : String,
         required : [true,'Email Is Required']
     },
+    Donatorpincode: {
+        type: Number,
+        required: [true, 'Pincode is required']
+    },
     Donatorphone: {
         type: Number,
         required: [true, 'Phone number is required']
+    },
+    Donatormessage: {
+        type: String,
+        required: [true, 'Message is required']
     },
     DonatorPassword: {
         type: String,

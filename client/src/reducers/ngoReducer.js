@@ -104,3 +104,26 @@ export const addNgoReducer = (state = {}, action) => {
       default : return state
     }
 };
+
+export const updateNgoByIdReducer = (state = {}, action) => {
+    switch(action.type){
+      case 'UPDATE_NGOBYID_REQUEST' :
+          return {
+              ...state,
+              loading : true
+          }
+      case 'UPDATE_NGOBYID_SUCCESS' :
+          return {
+              updatesuccess : true,
+              updateloading : false
+          }
+      case 'UPDATE_NGOBYID_FAIL' :
+          return {
+              updateerror : action.payload,
+              updateloading : false
+          }
+      default : return state
+    }
+};
+
+

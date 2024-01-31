@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import tnc from "../../Data/TnC";
 import { signNgo } from "../../actions/ngoActions";
 
+
 const SignupNGO = () => {
   const ToTop = () => {
     window.scrollTo({
@@ -59,9 +60,9 @@ const SignupNGO = () => {
       setNgopassword("");
       setNgoPNumber("");
       setNgoaltPNumber("");
-      toast.success("Account created successfully! Please login to continue.", {
-        position: "top-center",
-      });
+      // toast.success("Account created successfully!", {
+      //   position: "top-center",
+      // });
       // navigate("/Entry");
     }
   };
@@ -117,7 +118,7 @@ const SignupNGO = () => {
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#72a2e1] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-1"
                           type="text"
                           value={Ngoname}
@@ -143,7 +144,7 @@ const SignupNGO = () => {
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#72a2e1] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-1"
                           type="text"
                           value={NgoAddress}
@@ -169,7 +170,7 @@ const SignupNGO = () => {
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#72a2e1] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-1"
                           type="text"
                           value={NgoCity}
