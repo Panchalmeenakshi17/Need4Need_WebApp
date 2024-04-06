@@ -91,6 +91,8 @@ const App = () => {
             <Route exact path="/Footer2" element={<Footer2 />} />
             <Route exact path="/DonatorProfile" element={<DonatorProfile />} />
             <Route exact path="/EditDonator" element={<EditDonator />} />
+          <Route exact path="/NgoList" element={<NgoList />} />
+
             <Route path="*" element={<NotFound />} />
             
           </Routes>
