@@ -22,7 +22,7 @@ const AdminDashboard = () => {
           </div>
           <div className=" absolute inset-1">
             <div className="font-bold md:p-5 p-2  ">
-              <div className="  md:my-20 font-scnd my-10">
+              <div className="  md:my-20 font-Main my-10">
                 <div className="md:flex md:flex-row flex-col md:space-y-0 space-y-10 md:justify-center">
                   <div className="md:w-full w-full md:px-0 px-  flex justify-center">
                     <div className="  p-7  backdrop-blur-md border-4 transition ease-in-out hover:shadow-2xl

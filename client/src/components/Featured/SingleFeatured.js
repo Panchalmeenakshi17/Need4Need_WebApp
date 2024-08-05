@@ -5,14 +5,14 @@ import { HiArrowRight } from "react-icons/hi";
 
 
   
-  const SingleFeatured = ({  video }) => {
+  const SingleFeatured = () => {
     return (
       <>
-        <div className="flex justify-center gap-16 p-20 md:mt-20">
+        <div className="flex w-full justify-center gap-16 p-20 md:mt-20">
           <HoverVideoPlayer
-            videoSrc={video}
-            className="w-1/2 grid grid-cols-2 hover:border-4 backdrop-filter backdrop-blur-lg
-              border-[#ffffff] hover:shadow-[#9dffa4] shadow-2xl hover:-translate-y-5 cursor-pointer transition ease-in-out "
+            // videoSrc={video}
+            className="w-full grid grid-cols-2 hover:border-4 backdrop-filter backdrop-blur-lg
+              border-[#ffffff] hover:shadow-[#7a97ff] shadow-2xl   cursor-pointer transition ease-in-out "
             pausedOverlay={({ id,alt, name, img }) => (
               <div key={id} className="">
                 <img
@@ -25,7 +25,7 @@ import { HiArrowRight } from "react-icons/hi";
 
 </div>
     </div>
-    <div className=" bg-[#ffffffa8] w-full z-10 font-scnd bottom-0 p-2 absolute ">
+    <div className=" bg-[#ffffffa8] w-full z-10 font-Main bottom-0 p-2 absolute ">
     <div className="">
       <h1 className=" text-white text-3xl">{name}</h1>
 

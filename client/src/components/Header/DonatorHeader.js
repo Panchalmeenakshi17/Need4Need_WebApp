@@ -25,24 +25,24 @@ const DonatorHeader = () => {
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
-        <div className="bg-[#000000ff] flex justify-end font-scnd items-end md:px-10 px-5 py-4">
+        <div className="bg-[#000000ff] flex justify-end font-Main items-end md:px-10 px-5 py-4">
           {/* <div>
             <NavLink to="/">
               <img
                 className="md:w-1/4 w-1/3"
-                src="../images/Black_and_Green_Modern_Automotive_Logo__1_-removebg-preview.png"
+                src="../images/Black_and_blue_Modern_Automotive_Logo__1_-removebg-preview.png"
                 alt="not valid"
               />
             </NavLink>
           </div> */}
 
           <div>
-            <div className="md:flex hidden justify-center md:gap-10 items-center text-green-400 text-lg font-bold">
+            <div className="md:flex hidden justify-center md:gap-10 items-center text-blue-400 text-lg font-bold">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                    ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                     : null
                 }
               >
@@ -52,11 +52,11 @@ const DonatorHeader = () => {
               <div className="group relative inline-block">
                 <NavLink
                   to=""
-                  className="text-green-400 inline-flex hover:bg-[#9be961] transition ease-in-out gap-2 hover:text-[#000000] font-scnd items-center p-2  rounded-xl"
+                  className="text-blue-400 inline-flex hover:bg-[#9be961] transition ease-in-out gap-2 hover:text-[#000000] font-Main items-center p-2  rounded-xl"
                 >
                   Need4Need <MdKeyboardArrowDown className="text-2xl" />
                 </NavLink>
-                <div className="font-scnd hidden absolute group-hover:block w-full">
+                <div className="font-Main hidden absolute group-hover:block w-full">
                   <div className="bg-[#153619] group-hover:block flex flex-col text-center space-y-2  z-20 absolute rounded-bl-xl rounded-br-2xl ">
                   <button className=" px-12 w-full hover:bg-[#5dff8e5c] transition ease-in-out  " >
 
@@ -64,7 +64,7 @@ const DonatorHeader = () => {
                       to="/About"
                       className={({ isActive }) =>
                         isActive
-                          ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                          ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                           : null
                       }
                     >
@@ -77,7 +77,7 @@ const DonatorHeader = () => {
                       to="/services"
                       className={({ isActive }) =>
                         isActive
-                          ? " mt-3  transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                          ? " mt-3  transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                           : null
                       }
                     >
@@ -89,7 +89,7 @@ const DonatorHeader = () => {
                       to="/Contact"
                       className={({ isActive }) =>
                         isActive
-                          ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                          ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                           : null
                       }
                     >
@@ -101,13 +101,13 @@ const DonatorHeader = () => {
               </div>
               <div className=" group relative inline-block">
                   <CgProfile className="  rounded-full transition ease-in-out hover:bg-[#14ba1473] hover:rounded-full  text-5xl" />
-                  <div className="font-scnd hidden absolute hover:transition hover:ease-in-out group-hover:block w-full">
+                  <div className="font-Main hidden absolute hover:transition hover:ease-in-out group-hover:block w-full">
                     <div className="bg-[#153619] rounded-bl-xl group-hover:block flex flex-col text-center space-y-2  z-20 absolute rounded-br-2xl md:w-[100px]  -translate-x-6 ">
                       <NavLink
                         to="/DonatorProfile"
                         className={({ isActive }) =>
                           isActive
-                            ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                            ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                             : null
                         }
                       >
@@ -121,7 +121,7 @@ const DonatorHeader = () => {
                         }}
                         className=" p-2 w-full rounded-bl-xl  hover:bg-red-700 rounded-br-2xl hover:shadow-inner tranition ease-in-out bg-red-500"
                       >
-                        <span className="relative w-full text-left text-white transition-colors duration-200 font-scnd ease-in-out group-hover:text-white">
+                        <span className="relative w-full text-left text-white transition-colors duration-200 font-Main ease-in-out group-hover:text-white">
                           Logout
                         </span>
                       </button>
@@ -134,7 +134,7 @@ const DonatorHeader = () => {
               {!menu && (
                 <HiMenuAlt4
                   fontSize={28}
-                  className="bg-green-400 rounded fill-white md:hidden cursor-pointer"
+                  className="bg-blue-400 rounded fill-white md:hidden cursor-pointer"
                   onClick={() => setMenu(true)}
                 />
               )}
@@ -153,7 +153,7 @@ const DonatorHeader = () => {
                     to="/"
                     end
                     className={({ isActive }) =>
-                      isActive ? "text-green-400 font-black" : null
+                      isActive ? "text-blue-400 font-black" : null
                     }
                   >
                     <li className="my-3 text-lg mx-4 font-semibold cursor-pointer hover:text-[#9be961]">
@@ -162,7 +162,7 @@ const DonatorHeader = () => {
                   </NavLink>
                   <NavLink
                             to="/About"
-                            className={({ isActive }) => isActive ? 'text-light1 text-green-400  font-bold' : null }
+                            className={({ isActive }) => isActive ? 'text-light1 text-blue-400  font-bold' : null }
                           >
                             <li className="cursor-pointer my-5   z-10 text-lg font-semibold hover:text-light2">
                               About Us
@@ -170,7 +170,7 @@ const DonatorHeader = () => {
                           </NavLink>
                           <NavLink
                             to="/services"
-                            className={({ isActive }) => isActive ? 'text-light1 text-green-400 font-bold' : null }
+                            className={({ isActive }) => isActive ? 'text-light1 text-blue-400 font-bold' : null }
                           >
                             <li className="cursor-pointer my-5 text-lg mt-1 font-semibold hover:text-light2">
                               Services
@@ -178,7 +178,7 @@ const DonatorHeader = () => {
                           </NavLink>
                           <NavLink
                             to="/Contact"
-                            className={({ isActive }) => isActive ? 'text-light1 text-green-400 font-bold' : null }
+                            className={({ isActive }) => isActive ? 'text-light1 text-blue-400 font-bold' : null }
                           >
                             <li className="cursor-pointer my-5 text-lg mt-1 font-semibold hover:text-light2">
                               Contact
@@ -187,26 +187,26 @@ const DonatorHeader = () => {
                   <div className="   flex flex-col ">
                     <button
                       onClick={() => setsigninModal(true)}
-                      className="relative my-4 inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-green-500 rounded-xl group"
+                      className="relative my-4 inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-500 rounded-xl group"
                     >
-                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-green-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-blue-700 rounded group-hover:-mr-4 group-hover:-mt-4">
                         <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                       </span>
-                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-green-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-scnd ease-in-out group-hover:text-white">
+                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-blue-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-Main ease-in-out group-hover:text-white">
                         Sign in
                       </span>
                     </button>
 
                     <button
                       onClick={() => setShowModal(true)}
-                      className="relative my-4 inline-flex items-center   justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-green-500 rounded-xl group"
+                      className="relative my-4 inline-flex items-center   justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-500 rounded-xl group"
                     >
-                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-green-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-blue-700 rounded group-hover:-mr-4 group-hover:-mt-4">
                         <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                       </span>
-                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-green-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-scnd ease-in-out group-hover:text-white">
+                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-blue-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-Main ease-in-out group-hover:text-white">
                         Log in
                       </span>
                     </button>
@@ -220,7 +220,7 @@ const DonatorHeader = () => {
         {/* Signin Modal */}
         {signinModal ? (
           <>
-            <div className="justify-center bg-[#00000087] items-center font-scnd flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="justify-center bg-[#00000087] items-center font-Main flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative w-auto my-6 mx-auto border-2 border-black max-w-3xl">
                 <div className="border-0 rounded-lg backdrop-blur-lg shadow-lg relative flex flex-col w-full sm:w-[400px] md:w-[500px] lg:w-[600px] bg-[#ffffffd6] outline-none focus:outline-none">
                   {/*header*/}
@@ -267,7 +267,7 @@ const DonatorHeader = () => {
         {/* Login Modal */}
         {showModal ? (
   <>
-    <div className="justify-center font-scnd items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none transition-opacity duration-300">
+    <div className="justify-center font-Main items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none transition-opacity duration-300">
       <div className="relative w-auto my-6 mx-auto max-w-3xl opacity-100 transition-transform duration-300 transform scale-100">
         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full sm:w-[400px] md:w-[500px] lg:w-[600px] bg-[#ffffff] outline-none focus:outline-none">
                   {/*header*/}
@@ -279,7 +279,7 @@ const DonatorHeader = () => {
                       className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                       onClick={() => setShowModal(false)}
                     >
-                      <AiOutlineClose className="fill-green-500" />
+                      <AiOutlineClose className="fill-blue-500" />
                     </button>
                   </div>
                   <div className="relative flex flex-col text-xl md:p-10 p-6 gap-10">
@@ -308,7 +308,7 @@ const DonatorHeader = () => {
 
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
-                      className="text-green-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      className="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
                       onClick={() => setShowModal(false)}
                     >

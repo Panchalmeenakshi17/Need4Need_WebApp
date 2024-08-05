@@ -16,7 +16,7 @@ const importData = async () => {
         await NGO.deleteMany();
         const sampleData = NGOs.map(ngo => {return{...ngo}});
         await NGO.insertMany(sampleData);
-        console.log('Data Imported Of NGO'.bgGreen.white);
+        console.log('Data Imported Of NGO'.bgblue.white);
         process.exit();
      } catch (error) {
         console.log(`${error}`.bgRed.white);
@@ -29,7 +29,7 @@ const importAdminData = async () => {
        await Admin.deleteMany();
        const sampleData = Admins.map(admin => {return{...admin}});
        await Admin.insertMany(sampleData);
-       console.log('Data Imported Of Admin'.bgGreen.white);
+       console.log('Data Imported Of Admin'.bgblue.white);
        process.exit();
     } catch (error) {
        console.log(`${error}`.bgRed.white);

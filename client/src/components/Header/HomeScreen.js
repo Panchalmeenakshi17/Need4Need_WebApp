@@ -17,7 +17,7 @@ const HomeScreen = () => {
           className="md:h-screen h-full bg-blend-overlay"
           style={{
             backgroundImage:
-              "url(images/pngtree-light-green-summer-nice-background-stock-photo-image-pngtree-image_738449.jpg)",
+              "url(images/pngtree-light-blue-summer-nice-background-stock-photo-image-pngtree-image_738449.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -34,35 +34,35 @@ const HomeScreen = () => {
                 alt="hello"
               />
               </div>
-              <div className=" font-scnd md:w-1/2 w-full">
+              <div className=" font-Main md:w-1/2 w-full">
                 <h1 className="font-bold text-center text-5xl">
                   Book your first Ride with
                 </h1>
-                <h2 className="text-green-800 font-bold py-7 text-center text-6xl md:text-7xl">
+                <h2 className="text-blue-800 font-bold py-7 text-center text-6xl md:text-7xl">
                   {" "}
                   Book-n-Go
                 </h2>
-                <h2 className="text-green-800 font-bold text-center text-2xl">
+                <h2 className="text-blue-800 font-bold text-center text-2xl">
                   {" "}
                   Always there whenever you needed
                 </h2>
                 <div className="gap-20 md:py-20 py-10 flex justify-center">
                   <NavLink
                     to="/LoginFirst"
-                    className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 border-green-500 bg-[#33d1334b] font-medium border-green-00 text-green-600"
+                    className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 border-blue-500 bg-[#33d1334b] font-medium border-blue-00 text-blue-600"
                   >
-                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-green-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                    <span className="relative text-green-600 transition duration-300 font-scnd font-bold group-hover:text-white ease">
+                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                    <span className="relative text-blue-600 transition duration-300 font-Main font-bold group-hover:text-white ease">
                       See all the Rides
                     </span>
                   </NavLink>
                   <NavLink
                     to="/AboutUs"
-                    className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 border-green-500 bg-[#33d1334b] font-medium border-green-00 text-green-600"
+                    className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 border-blue-500 bg-[#33d1334b] font-medium border-blue-00 text-blue-600"
                   >
-                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-green-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
 
-                    <span className="relative text-green-600 transition duration-300 font-scnd font-bold group-hover:text-white ease">
+                    <span className="relative text-blue-600 transition duration-300 font-Main font-bold group-hover:text-white ease">
                       {" "}
                       Learn about Book-n-Go
                     </span>

@@ -7,7 +7,7 @@ import { signNgo } from "../../actions/ngoActions";
 import Fade from "react-reveal/Fade";
 
 
-const Ngoregister = () => {
+const   Ngoregister = () => {
 
   
   const [isVisible, setIsVisible] = useState(false);
@@ -93,33 +93,33 @@ const Ngoregister = () => {
   return (
     <>
       <motion.div
-        className="bg-gradient-to-tr relative md:h-full h-[1700px] from-[#4b4886] via-[#100e35] to-[#545197]"
+        className=" md:-mt-20  -mt-20 relative md:h-[500px] h-[1400px] bg-[#030103]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 6 }}
         exit={{ opacity: 0 }}
       >
      
 
-        <div className=" font-scnd bg-[#030103] w-full h-full shadow-2xl ">
-          <div className=" ">
+        {/* <div className="  font-Main  w-full h-full shadow-2xl "> */}
+          <div className=" relative ">
          
             <img
-              src="https://images.unsplash.com/photo-1672009190560-12e7bade8d09?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className=" w-full md:h-[670px] "
+              src="https://images.unsplash.com/photo-1625685553971-222fb25d504a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className=" w-full md:h-screen "
               alt="not found"
             />
           </div>
 
-          <div className="p-2 md:translate-x-[200px]  md:w-[500px] ">
-            <div className=" ">
-              <div className="relative border-2 border-violet-600 w-full rounded-3xl md:p-10 p-4 md:-mt-[700px] md:text-9xl md:h-[350px] md:translate-y-[150px] -translate-y-[200px] md:-translate-x-[100px] md:w-[700px] overflow-hidden">
+          <div className="p-2 md:flex justify-between absolute inset-1   ">
+            <div className=" bgy md:mt-20 mt-10 md:p-0 p-5 ">
+              <div className="relative w-full mt-4 rounded-3xl backdrop-blur-md md:backdrop-blur-0 md:bg-transparent bg-[#665a9000] md:mt-32 md:p-10 p-2   md:text-4xl   overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full filter backdrop-blur-md md:backdrop-blur-md bg-[rgba(102,90,144,0.24)]"></div>
-                <h2 className="relative z-10 text-[#d0cadc] text-4xl mb-1 md:p-0 px-6 text-left translate-x-[0px] font-semibold md:text-8xl font-SourceSansPro title-font">
+                <h2 className="relative z-10 text-[#d0cadc] text-3xl mb-1 md:p-0 px-6 text-center   font-semibold md:text-4xl font-Main title-font">
                   <Fade bottom distance="20%">
                     Get Connected
                   </Fade>
                 </h2>
-                <p className="relative z-10 leading-relaxed md:text-3xl md:mb-5 md:w-[600px] md:mt-10 w-full p-6 md:p-0 text-[#81bedd]">
+                <p className="relative z-10 leading-relaxed md:text-xl md:mb-5   text-center  w-full p-6 md:p-0 text-[#81bedd]">
                   <Fade bottom distance="20%">
                     Please share all your necessary details so that your Food
                     pickup details can be shared on your Emails.
@@ -127,16 +127,17 @@ const Ngoregister = () => {
                 </p>
               </div>
             </div>
-            <h1 className="md:translate-y-[550px] md:mt-0 -mt-[100px] text-white md:text-7xl md:w-[1100px]  text-4xl text-center w-full ">
+            <div className="   md:w-full  mt-20   w-full ">
+              <div className=" bg-blue600  md:">
+                <div className="  md:w-full rounded-3xl filter backdrop-blur-3xl  md:rounded-2xl bg-[#16176d01]    rounded-lgdark:border  dark:border-gray-700">
+            <h1 className="  md:p-5  text-white md:text-4xl md:w-full  text-4xl text-center w-full ">
               <Fade bottom distance="20%">
                 Fill the following Information
               </Fade>
             </h1>
-            <div className="   md:w-[1000px] md:translate-x-[40px] mt-20 md:mt-[650px] w-full h-full ">
-              <div className=" bg-green600  md:">
-                <div className="  md:w-[1000px] rounded-3xl md:translate-x-[10px] md:rounded-2xl bg-[#a48dd36b] shadow-[#393939] shadow-2xl  rounded-lgdark:border  dark:border-gray-700">
-                  <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <form className="   space-y-4 md:space-y-6">
+                  <div className="p-6  ">
+                    <form className="   ">
+                      <div className=" md:flex justify-between">
                       <Fade bottom distance="20%">
                       <div className="w-full md:w-full p-3">
                       <label className="block">
@@ -157,7 +158,7 @@ const Ngoregister = () => {
                       <div className="w-full md:w-full p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-2"
                           type="email"
                           value={Ngoemail}
@@ -168,11 +169,12 @@ const Ngoregister = () => {
                       </label>
                     </div>
                       </Fade>
+                    </div> <div className=" md:flex justify-between">
                       <Fade bottom distance="20%">
                       <div className="w-full md:w-full p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-1"
                           type="text"
                           value={NgoAddress}
@@ -187,7 +189,7 @@ const Ngoregister = () => {
                       <div className="w-full md:w-full p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-2"
                           type="text"
                           value={NgoState}
@@ -198,11 +200,12 @@ const Ngoregister = () => {
                       </label>
                     </div>
                       </Fade>
+                    </div> <div className=" md:flex justify-between">
                       <Fade bottom distance="20%">
                       <div className="w-full md:w-full p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#ffffff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-1"
                           type="text"
                           value={NgoCity}
@@ -217,7 +220,7 @@ const Ngoregister = () => {
                       <div className="w-full md:w-full p-3">
                       <label className="block">
                         <input
-                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640]  placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           id="signUpInput1-2"
                           type="number"
                           value={NgoPincode}
@@ -228,10 +231,11 @@ const Ngoregister = () => {
                       </label>
                     </div>
                       </Fade>
+                    </div> <div className=" md:flex justify-between">
                       <Fade bottom distance="20%">
                       <div className="w-full md:w-full p-3">
                       <input
-                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                         type="number"
                         value={NgoPNumber}
                         required
@@ -243,7 +247,7 @@ const Ngoregister = () => {
                       <Fade>
                       <div className="w-full md:w-full p-3">
                       <input
-                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                         type="number"
                         value={NgoaltPNumber}
                         required
@@ -252,11 +256,12 @@ const Ngoregister = () => {
                       />
                     </div>
                       </Fade>
+                    </div> <div className=" md:flex justify-between">
                       <Fade>
                       <div className="p-3 w-full">
                       <label className="block relative">
                         <input
-                          className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                          className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                           type={isPasswordVisible ? "text" : "password"}
                           value={Ngopassword}
                           required
@@ -310,7 +315,7 @@ const Ngoregister = () => {
                       <Fade>
                       <div className="w-full md:w-full p-3">
                       <input
-                        className="p-4 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
+                        className="p-3 w-full text-[#f0f7ff] tracking-tight bg-[#f6f6f640] placeholder:text-cyan-50 outline-none border border-gray-300 rounded-lg focus:border-indigo-500 transition duration-200"
                         type="text"
                         value={NgoComment}
                         required
@@ -319,10 +324,11 @@ const Ngoregister = () => {
                       />
                     </div>
                       </Fade>
+                    </div>
                       {/* <button
                         onClick={submitNgoData}
                         type="button"
-                        className="w-full shadow-inner shadow-green-800 text-white bg-[#30c04a91] hover:bg-green-500 transform ease-in-out duration-300 hover:font-bold hover:text-black focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-xl text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-SourceSansPro "
+                        className="w-full shadow-inner shadow-blue-800 text-white bg-[#30c04a91] hover:bg-blue-500 transform ease-in-out duration-300 hover:font-bold hover:text-black focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-xl text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-Main "
                       >
                         Send
                       </button> */}
@@ -331,7 +337,7 @@ const Ngoregister = () => {
                       <button
                         type="button"
                         onClick={submitSignup}
-                        className=" translate-x-[10px] transform delay-50 bg-[#328cc141] ease-in inline-block rounded bg-primary border-2 md:hover:bg-[#73a9c8fe] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                        className=" w-full rounded-full transform delay-50 bg-[#328cc141] ease-in inline-block bg-primary border-2 md:hover:bg-[#73a9c8fe] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                         data-te-ripple-init
                         data-te-ripple-color="light"
                       >
@@ -352,7 +358,7 @@ const Ngoregister = () => {
 
 
     </div>
-        </div>
+        {/* </div> */}
       </motion.div>
       <ToastContainer />
     </>

@@ -7,7 +7,7 @@ export default function SingleNgo({ id, name, pic, written }) {
       <Fade bottom>
         <div
           key={id}
-          className="md:flex   justify-between mt-10 md:mt-20 flex-col border-2   shadow-2xl hover:shadow-[#719969]  
+          className="md:flex   justify-between mt-10 md:mt-20 flex-col border-2 hover:-translate-x-7 shadow-2xl hover:shadow-blue-600  
            md:w-1/4 w-full h-min hover:bg-right-bottom cursor-pointer transition ease-in-out 
           
         rounded-xl"
@@ -21,17 +21,17 @@ export default function SingleNgo({ id, name, pic, written }) {
           </div>
           <div
             id={name}
-            className="md:flex font-bold  bg-[#235445] flex-col py-4 items-center  gap-2"
+            className="md:flex font-bold  bg-[#2a2e6b] flex-col py-4 items-center  gap-2"
           >
             <>
-              <h1 className="font-scnd text-[#31ffc1]  text-2xl text-center">
+              <h1 className="font-Main text-[#bcc7f3]  text-2xl text-center">
                 {/* ENRICH COMMUNITIES */} {name}
               </h1>
             </>
           </div>
           <div
             id={written}
-            className="md:flex bg-[#235445] fotn flex-col   items-center  gap-2"
+            className="md:flex bg-[#2a2e6b] fotn flex-col   items-center  gap-2"
           >
             <>
               <h2 className=" p-8 text-white text-justify">{written}</h2>

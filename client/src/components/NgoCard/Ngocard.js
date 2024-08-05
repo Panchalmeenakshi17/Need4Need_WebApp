@@ -22,16 +22,16 @@ const Ngocard = () => {
     <>
 
 {Data_Ngos.length > 0 && (
-  <div className=" font-scnd   md:mb-[500px] md:translate-y-[0px]  ">
+  <div className=" font-Main   md:mb-[400px]    ">
                 <div className="   md:py-5  ">
        
          <Fade bottom distance="20%">
-          <h1 className="md:absolute text-3xl  translate-y-10 md:px-2 md:py-4 md:p-0 p-5 text-gray-900 w-full dark:text-white font-bold md:text-6xl  hover:text-black text-center">
+          <h1 className="md:absolute text-3xl  md:px-2 m  md:p-0 p-5 text-gray-900 w-full dark:text-white font-bold md:text-4xl  hover:text-black text-center">
             NGOs which you can contact 
           </h1>
           </Fade>
         </div>
-        <div className="md:flex  mt-0 md:mt- absolute md:h-[1000px]  h-full w-full md:w-full  md:py-20 md:justify-center ">
+        <div className="md:flex mt-0   absolute md:h-[1000px]  h-full w-full md:w-full  md:justify-center ">
           <div className=" md:h-full  ">
             <div className="md:flex p-7  md:mt-0  md:flex-row flex-col md:flex-wrap md:justify-center items-center md:gap-x-20 gap-y-20 md:gap-y-14 md:px-20">
                             {Data_Ngos.slice(0, 3).map(Details => (
@@ -46,7 +46,7 @@ const Ngocard = () => {
                                 <Link to="/NgoList">
                                     <button onClick={scrollToTop} className="  md:mt-20  gap-3  transition ease-in-out hover:bg-slate-800  shadow-inner shadow-slate-500 flex justify-center md:w-[250px] p-3 bg-[black] w-full rounded-full text-xl text-white ">
                                        
-                                       <h1 className="">
+                                       <h1 className=" text-lg">
                                         View All
 
                                        </h1>

@@ -61,7 +61,7 @@ const Ngomain = () => {
           <div className="  absolute   inset-1 ">
               <div className="relative mt-32 md:flex md:justify-center ">
                 <div className=" md:p-0 p-3 ">
-                  <h1 className="relative md:p-12 p-5 md:translate-y-0 -translate-y-[100px] z-10 md:w border-2 border-[#79b4b3] md:text-6xl md:h-[320px] md:w-[900px] rounded-xl md:rounded-3xl w-full  text-[#bca0de] md:text-[#b8b7e2] font-scnd font-text-lg md:font-light text-center bg-[a571a540] filter backdrop-blur-md">
+                  <h1 className="relative md:p-12 p-5 md:translate-y-0 -translate-y-[100px] z-10 md:w border-2 border-[#79b4b3] md:text-6xl md:h-[320px] md:w-[900px] rounded-xl md:rounded-3xl w-full  text-[#bca0de] md:text-[#b8b7e2] font-Main font-text-lg md:font-light text-center bg-[a571a540] filter backdrop-blur-md">
                   Unlock a powerful platform to unite and amplify your NGO's
                     social mission
                   </h1>
@@ -70,9 +70,9 @@ const Ngomain = () => {
                       to="/Ngoregister"
                       className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
                     >
-                       <span className="font-scnd w-full h-full bg-gradient-to-br from-[#0a5013] via-[#269819] to-[#706dde] group-hover:from-[#0403283c] group-hover:via-[#0b33073f] group-hover:to-[#3d58405c] group-hover:border-[#2265d0] group-hover:border-4 absolute"></span>
+                       <span className="font-Main w-full h-full bg-gradient-to-br from-[#0a5013] via-[#269819] to-[#706dde] group-hover:from-[#0403283c] group-hover:via-[#0b33073f] group-hover:to-[#3d58405c] group-hover:border-[#2265d0] group-hover:border-4 absolute"></span>
                   <span className="relative px-[10px] py-[5px] md:px-6 md:py-3 transition-all ease-out bg-[#030f07] rounded-md group-hover:bg-opacity-20 duration-400">
-                        <span className="relative md:px-10 font-scnd text-sm md:text-lg text-white">
+                        <span className="relative md:px-10 font-Main text-sm md:text-lg text-white">
                         Register your NGO
                         </span>
                       </span>

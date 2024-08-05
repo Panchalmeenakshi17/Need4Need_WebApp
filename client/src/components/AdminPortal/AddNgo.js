@@ -134,7 +134,7 @@ const AddNgo = () => {
               <div className=" md:p-10 p-3 mx-auto">
                 <div className="max-w-3xl  mx-auto">
                   <h2
-                    className=" font-scnditalic text-center
+                    className=" font-Mainitalic text-center
                   md:text-7xl divide-red-500  md:p-10 p-6 text-5xl text-[#dfcafd] tracking-tighter"
                   >
                     Add a new NGO
@@ -142,7 +142,7 @@ const AddNgo = () => {
                    
                   <form
                     onSubmit={submitForm}
-                    className="flex font-scnd flex-wrap md:p-0 p-3"
+                    className="flex font-Main flex-wrap md:p-0 p-3"
                   >
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">

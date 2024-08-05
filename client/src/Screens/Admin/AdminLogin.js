@@ -57,24 +57,26 @@ const AdminLogin = () => {
   return (
     <>
       <motion.div
-        className=" bg-[black] h-[800px] md:h-full "
+        className="bg-[conic-gradient(var(--tw-gradient-stops))] from-blue-400 via-gray-900 to-gray-300
+       
+         md:-mt-40 -mt-20 h-[800px] md:h-full "
         initial={{ opacity: 0 }}
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
         <div className="relative">
-          <img
+          {/* <img
             src="https://images.unsplash.com/photo-1495592822108-9e6261896da8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className=" w-full h-full "
             alt="not found"
-          />
-          <div className=" absolute inset-1 ">
-            <div className="  p-10 ">
-              <div className="border-2 mt-20 border-white rounded-3xl backdrop-blur-md bg-[#85858500] font-scnd font-bold ">
-                <h1 className="text-3xl p-10 text-center font-scnd font-bold leading-tight tracking-tight text-green-600 md:text-6xl dark:text-white">
+          /> */}
+          <div className=" inset-1 ">
+            <div className=" p-5 md:py-20 py-10   md:p-10 ">
+              <div className="border-2 mt-20 md:mt-28 border-white rounded-3xl backdrop-blur-md bg-[#85858500] font-Main font-semibold ">
+                <h1 className="text-3xl p-10 text-center font-Main font-  leading-tight tracking-tight text-blue-800 md:text-4xl dark:text-white">
                   Admin Login
                 </h1>
-                <form className="font-bold p-5 md:p-20 ">
+                <form className="font-bold p-5  md:p-20 ">
                   <div className=" md:flex md:justify-between gap-[2px] ">
                     <div>
                       <label
@@ -133,7 +135,7 @@ const AdminLogin = () => {
                   </div>
                   <div className=" mt-10">
                     <button
-                      className="w-full bg-[#39f445] p-3 rounded-3xl shadow-sm shadow-gray-400 transition ease-in-out delay-100 font-black hover:bg-[red] hover:text-white text-center text-[#000000]"
+                      className="w-full text-base bg-[#3962f4] p-3 rounded-3xl shadow-sm shadow-gray-400 transition ease-in-out delay-100 font-black hover:bg-[#4000ff] hover:text-white text-center text-[#000000]"
                       onClick={(event) => loginAdminHandler(event)}
                     >
                       Login account

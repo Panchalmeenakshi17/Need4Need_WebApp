@@ -4,6 +4,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import { addNgoReducer, getAllNgosReducer, getNgoByIdReducer, loginNgoReducer, ngoSignupReducer, updateNgoByIdReducer } from './reducers/ngoReducer';
 import { addDonatorReducer, donatorSignupReducer, getAllDonatorsReducer, getDonatorByIdReducer, loginDonatorReducer, updateDonatordByIdReducer } from './reducers/donatorReducer';
 import { loginAdminReducer } from './reducers/adminReducer';
+import { contactUser } from './reducers/userReducer';
 
 let currentNgo = localStorage.getItem('currentNgo') ? JSON.parse(localStorage.getItem('currentNgo')) : null;
 let currentDonator = localStorage.getItem('currentDonator') ? JSON.parse(localStorage.getItem('currentDonator')) : null
@@ -31,8 +32,10 @@ const rootReducer = combineReducers({
     updateDonatordByIdReducer,
     
     //Admin
-    loginAdminReducer
+    loginAdminReducer,
 
+    //Contact
+    contactUser,
 });
 
 

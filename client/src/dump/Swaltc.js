@@ -10,11 +10,11 @@ const showSwal  =(event)=>{
         text: tnc.tnc,
         width: 800,
           customclassName: {
-            text: "font-scnd",
+            text: "font-Main",
             text: "justify",
-            title: "text-2xl font-scnd font-bold text-green-600",
+            title: "text-2xl font-Main font-bold text-blue-600",
             confirmButton:
-              "bg-green-500 font-scnd hover:bg-green-600 text-white font-bold py-2 px-4 rounded",
+              "bg-blue-500 font-Main hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",
           },
         // icon: "warning",
         

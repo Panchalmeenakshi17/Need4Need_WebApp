@@ -77,11 +77,11 @@ const SignupNGO = () => {
       text: tnc.tnc,
       width: 800,
       customclassName: {
-        text: "font-scnd",
+        text: "font-Main",
         text: "justify",
-        title: "text-2xl font-scnd font-bold text-green-600",
+        title: "text-2xl font-Main font-bold text-blue-600",
         confirmButton:
-          "bg-green-500 font-scnd hover:bg-green-600 text-white font-bold py-2 px-4 rounded",
+          "bg-blue-500 font-Main hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",
       },
       // icon: "warning",
 
@@ -94,27 +94,27 @@ const SignupNGO = () => {
   return (
     <>
       <motion.div
-        className=" bg-[#000000] h-[980px] md:h-[820px] "
+        className="bg-[conic-gradient(var(--tw-gradient-stops))] from-blue-900 to-gray-400  h-full md:h-full md:-mt-20 -mt-20  "
         initial={{ opacity: 0 }}
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
-        <div className="  relative bg-[#00000032] md:w-full h-full shadow-2xl shadow-black">
-          <div className="NGO md:h-[900px] h-[1200px]  bg-blend-overlay w-full"></div>
-          <div className="flex justify-center md:p-0  absolute md:inset-1">
-            <div className=" z-10 md:mt-10 -mt-[1150px] md:bg-[#00000000] bg-[#6cbacf00] w-full h-full shadow-2xl shadow-[#3d5378] rounded-3xl md:border-2 border-[#ffffff65] hover:border-white transition duration-300 ease-in-out  backdrop-blur-xl md:w-[1000px] md:h-full overflow-hidden">
+        <div className="   ">
+          {/* <div className=" md:h-[900px] h-[1200px]  bg-blend-overlay w-full"></div> */}
+          <div className="flex justify-center md:p-0  mt-0 p-3  md:inset-1">
+            <div className=" z-10 md:mt-20 mt-20 md:bg-[#00000000] bg-[#6cbacf00] w-full h-full shadow-2xl hover:shadow-[#3d5378] rounded-3xl  border-2 border-[#ffffff65] hover:border-white transition duration-300 ease-in-out  backdrop-blur-xl md:w-[1000px] md:h-full overflow-hidden">
               <div className=" md:p-0 p- mx-auto">
-                <div className="max-w-3xl  mx-auto">
+                <div className="max-w-3xl mt-5  mx-auto">
                   <h2
-                    className="font-scnditalic text-center
-                  md:text-7xl divide-red-500  md:p-10 p-6 text-4xl text-[#50ff90] tracking-tighter"
+                    className="font-Mainitalic text-center
+                  md:text-4xl divide-red-500  md:p-10 p-3  text-3xl text-[#b4cefd] tracking-tighter"
                   >
-                    Create your <span className=" font-scnd ">NGO</span> account
+                    Create your <span className=" font-Main ">NGO</span> account
                   </h2>
-                  <p className="md:p font-scnd text-center md:mb-5 text-xl text-[#ffffff] tracking-tight">
+                  <p className="md:p font-Main text-center text-sm text-[#ffffff] tracking-tight">
                     Be the first one in this social and Nobel cause
                   </p>
-                  <form className="flex font-scnd flex-wrap md:p-0 p-3">
+                  <form className="flex font-Main flex-wrap md:p-0 p-3">
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
@@ -307,12 +307,12 @@ const SignupNGO = () => {
                       </button>
                       <br />
                     </div>
-                    <span className=" md:p-0 p-3 font-scnd md:mt-[10px] md:text-left text-center w-full h-full text-[#b1d1fa] tracking-tight">
+                    <span className=" md:p-0 p-3 font-Main md:mt-[10px] md:text-left text-center w-full h-full text-[#b1d1fa] tracking-tight">
                       <span>Already have an account?</span>
                       <button onClick={ToTop}>
                         <NavLink
                           to="/LoginNgo"
-                          className="text-[#bfbffd] hover:text-[#ff6464] gap-8 font-scnd font-bold transition duration-200"
+                          className="text-[#bfbffd] hover:text-[#ff6464] gap-8 font-Main font-bold transition duration-200"
                         >
                           {" "}
                           Log In
@@ -326,7 +326,7 @@ const SignupNGO = () => {
           </div>
         </div>
         {/* <button
-          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-green-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
+          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-blue-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
        rounded-full bg-[#23b668] absolute"
         >
           <NavLink to="/">

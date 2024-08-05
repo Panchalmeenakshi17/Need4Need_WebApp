@@ -24,7 +24,7 @@ const Problems = () => {
                 <li>
                   <b>Climate Change:</b> As previously mentioned, food wastage
                   contributes to climate change by emitting methane as it
-                  decomposes in landfills. Methane is a potent greenhouse gas
+                  decomposes in landfills. Methane is a potent bluehouse gas
                   that has a more significant impact on global warming than
                   carbon dioxide.
                   <br />

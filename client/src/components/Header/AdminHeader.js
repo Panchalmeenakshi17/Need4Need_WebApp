@@ -23,24 +23,24 @@ const AdminHeader = () => {
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
-        <div className="bg-[#000000ff] flex justify-end font-scnd items-end md:px-10 px-5 py-4">
+        <div className="bg-[#000000ff] flex justify-end font-Main items-end md:px-10 px-5 py-4">
           {/* <div>
             <NavLink to="/">
               <img
                 className="md:w-1/4 w-1/3"
-                src="../images/Black_and_Green_Modern_Automotive_Logo__1_-removebg-preview.png"
+                src="../images/Black_and_blue_Modern_Automotive_Logo__1_-removebg-preview.png"
                 alt="not valid"
               />
             </NavLink>
           </div> */}
 
           <div>
-          <div className="md:flex hidden justify-center md:gap-10 items-center text-green-400 text-lg font-bold">
+          <div className="md:flex hidden justify-center md:gap-10 items-center text-blue-400 text-lg font-bold">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                    ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                     : null
                 }
               >
@@ -50,7 +50,7 @@ const AdminHeader = () => {
                 to="/DonatorsList"
                 className={({ isActive }) =>
                   isActive
-                    ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                    ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                     : null
                 }
               >
@@ -58,12 +58,12 @@ const AdminHeader = () => {
                 View Donators
               </NavLink>
 
-              <div className="flex gap-10  justify-center items-center text-green-400 text-lg font-semibold">
+              <div className="flex gap-10  justify-center items-center text-blue-400 text-lg font-semibold">
                 <NavLink
                   to="/AdminNgoList"
                   className={({ isActive }) =>
                     isActive
-                      ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl"
+                      ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl"
                       : null
                   }
                 >
@@ -72,22 +72,22 @@ const AdminHeader = () => {
                 <div className="group relative inline-block">
                 <button
                   
-                  className="text-green-400 inline-flex hover:bg-[#9be961] transition ease-in-out gap-2 hover:text-[#000000] font-scnd items-center py-2 px-5 rounded-xl"
+                  className="text-blue-400 inline-flex hover:bg-[#9be961] transition ease-in-out gap-2 hover:text-[#000000] font-Main items-center py-2 px-5 rounded-xl"
                 >
                   Add New<MdKeyboardArrowDown className="text-2xl" />
                 </button>
-                <div className="font-scnd hidden absolute group-hover:block w-full">
+                <div className="font-Main hidden absolute group-hover:block w-full">
                   <div className="bg-[#153619] group-hover:block flex flex-col text-center p-4 space-y-2  z-20 absolute rounded-bl-xl rounded-br-2xl ">
                     <NavLink to="/AddDonator"
                     className={({ isActive }) =>
-                      isActive ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff] px-6   rounded-xl" : " px-6"
+                      isActive ? "   transition ease-in-out font-bold font-Main  text-[#ffffff] px-6   rounded-xl" : " px-6"
                     }>  Donator
                        
                     </NavLink>
                     <br/>
                     <NavLink to="/AddNgo"
                     className={({ isActive }) =>
-                      isActive ? "   transition ease-in-out font-bold font-scnd  text-[#ffffff]   rounded-xl" : null
+                      isActive ? "   transition ease-in-out font-bold font-Main  text-[#ffffff]   rounded-xl" : null
                     }>
                     <button className="mt-3">
                        NGO
@@ -105,7 +105,7 @@ const AdminHeader = () => {
                         }}
                         className=" p-2 hover:bg-red-700   hover:shadow-inner tranition ease-in-out bg-red-500"
                       >
-                        <span className="relative  text-left text-white transition-colors duration-200 font-scnd ease-in-out group-hover:text-white">
+                        <span className="relative  text-left text-white transition-colors duration-200 font-Main ease-in-out group-hover:text-white">
                           Logout
                         </span>
                       </button>
@@ -116,7 +116,7 @@ const AdminHeader = () => {
               {!menu && (
                 <HiMenuAlt4
                   fontSize={28}
-                  className="bg-green-400 rounded fill-white md:hidden cursor-pointer"
+                  className="bg-blue-400 rounded fill-white md:hidden cursor-pointer"
                   onClick={() => setMenu(true)}
                 />
               )}
@@ -135,7 +135,7 @@ const AdminHeader = () => {
                     to="/"
                     end
                     className={({ isActive }) =>
-                      isActive ? "text-green-400 font-black" : null
+                      isActive ? "text-blue-400 font-black" : null
                     }
                   >
                     <li className="my-3 text-lg mx-4 font-semibold cursor-pointer hover:text-[#9be961]">
@@ -145,7 +145,7 @@ const AdminHeader = () => {
                   <NavLink
                     to="/DonatorsList"
                     className={({ isActive }) =>
-                      isActive ? "text-green-400 font-bold" : null
+                      isActive ? "text-blue-400 font-bold" : null
                     }
                   >
                     <li className="my-3 text-lg mx-4 font-semibold cursor-pointer hover:text-[#9be961]">
@@ -155,7 +155,7 @@ const AdminHeader = () => {
                   <NavLink
                     to="/AdminNgoList"
                     className={({ isActive }) =>
-                      isActive ? "text-green-400 font-bold" : null
+                      isActive ? "text-blue-400 font-bold" : null
                     }
                   >
                     <li className="my-3 text-lg mx-4 font-semibold cursor-pointer hover:text-[#9be961]">
@@ -201,13 +201,13 @@ const AdminHeader = () => {
                       onClick={() => {
                         dispatch(logoutAdmin());
                       }}
-                      className="relative my-4 inline-flex items-center   justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-green-500 rounded-xl group"
+                      className="relative my-4 inline-flex items-center   justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-blue-500 rounded-xl group"
                     >
-                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-green-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                      <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-blue-700 rounded group-hover:-mr-4 group-hover:-mt-4">
                         <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                       </span>
-                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-green-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-scnd ease-in-out group-hover:text-white">
+                      <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-blue-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                      <span className="relative w-full text-center font-bold text-white transition-colors duration-200 font-Main ease-in-out group-hover:text-white">
                         Log Out
                       </span>
                     </button>

@@ -22,9 +22,9 @@ const NotFound = () => {
         <div className="flex md:p-0 p-6 justify-center">
           <div className="mt-10 w-full text-center shadow-black shadow-2xl backdrop-blur-lg text-white bg-[#8d8c8c49] p-8 rounded-lg">
             <div className="text-3xl w-full">
-              <h1 className="text-back font-scnd">Error 404 - Page Not Found</h1>
+              <h1 className="text-back font-Main">Error 404 - Page Not Found</h1>
               <br />
-              <p className="text-back font-scnd">The page you are looking for does not exist.</p>
+              <p className="text-back font-Main">The page you are looking for does not exist.</p>
             </div>
           </div>
         </div>

@@ -75,7 +75,7 @@ const Newsletter = () => {
                     <button
                       type="submit"
                       onClick={submitHandler}
-                      className="inline-block shadow-black shadow-2xl rounded md:my-0 transform duration-300 ease-in-out hover:bg-green-800 hover:border-2 hover:border-green-900  w-[150px] h-[50px] bg-black text-white text-xl font-SourceSansPro font-bold "
+                      className="inline-block shadow-black shadow-2xl rounded md:my-0 transform duration-300 ease-in-out hover:bg-blue-800 hover:border-2 hover:border-blue-900  w-[150px] h-[50px] bg-black text-white text-xl font-SourceSansPro font-bold "
                       data-te-ripple-init
                       data-te-ripple-color="light"
                     >

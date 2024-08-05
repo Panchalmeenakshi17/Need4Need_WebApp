@@ -79,7 +79,7 @@ const EditDonator = () => {
               onClick={() => {
                 toast.dismiss();
               }}
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md mx-2"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md mx-2"
             >
               Cancel
             </button>
@@ -120,9 +120,9 @@ const EditDonator = () => {
           <img src="https://images.unsplash.com/photo-1618386230114-462340e82fc7?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="" alt="not found"/>
         </div>
         <div className="absolute inset-1">
-        <div className="font-scnd font-bold">
+        <div className="font-Main font-bold">
             <div>
-              <h1 className="px-4 text-center text-gray-300 text-4xl md:text-5xl font-scnd font-bold">
+              <h1 className="px-4 text-center text-gray-300 text-4xl md:text-5xl font-Main font-bold">
                 {" "}
                 Edit your Details{" "}
               </h1>
@@ -245,7 +245,7 @@ const EditDonator = () => {
                    
                   <button
                       type="submit"
-                      className="w-full bg-green-600 text-white bg-primary-600 hover:bg-green-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                      className="w-full bg-blue-600 text-white bg-primary-600 hover:bg-blue-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                     >
                       Update an account
                     </button>
@@ -259,7 +259,7 @@ const EditDonator = () => {
         </button>
                 </div>
                 <div className="md:px-36 flex justify-center p-6">
-                  <button className="font-scnd">
+                  <button className="font-Main">
                     <NavLink
                       to="/"
                       className="inline-flex px-4 items-center justify-center  h-10 md:w-[150px] text-md font-semibold text-center text-[#ffffff] no-underline align-middle transition-all duration-300 ease-in-out   bg-transparent border-2 border-blue-600 border-solid rounded-full cursor-pointer select-none   hover:border-[#4166cd] focus:shadow-xs focus:no-underline"

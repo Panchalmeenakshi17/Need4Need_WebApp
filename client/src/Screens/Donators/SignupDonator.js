@@ -111,11 +111,11 @@ const SignupDonator = () => {
       text: tnc.tnc,
       width: 800,
       customclassName: {
-        text: "font-scnd",
-        text: "justify",
-        title: "text-2xl font-scnd font-bold text-green-600",
+        text: "font-Main justify",
+        // text: "justify",
+        title: "text-2xl font-Main font-Main text-blue-600",
         confirmButton:
-          "bg-green-500 font-scnd hover:bg-green-600 text-white font-bold py-2 px-4 rounded",
+          "bg-blue-500 font-Main hover:bg-blue-600 text-white font-Main py-2 px-4 rounded",
       },
       // icon: "warning",
 
@@ -128,27 +128,27 @@ const SignupDonator = () => {
   return (
     <>
       <motion.div
-        className=" bg-[#000000] h-[1000px] md:h-[850px] "
+        className=" bg-[conic-gradient(var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-blue-900 md:-mt-20 -mt-20 h-[1000px] md:h-[850px] "
         initial={{ opacity: 0 }}
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
-        <div className="  relative bg-[#00000032] md:w-full h-full shadow-2xl shadow-black">
-          <div className="with-bg-size h-full  md:opacity-90 bg-blend-overlay w-full"></div>
-          <div className="flex justify-center md:p-0 p- absolute md:inset-1">
-            <div className=" z-10 md:mt-10 -mt-[900px] md:bg-[#00000000] bg-[#6cbacf00] w-full h-full shadow-2xl shadow-[#3d5378] rounded-3xl border-2 border-[#ffffff65] hover:border-white transition duration-300 ease-in-out  backdrop-blur-xl md:w-[1000px] md:h-[800px] overflow-hidden">
+        {/* <div className="  relative bg-[#00000032] md:w-full h-full shadow-2xl shadow-black"> */}
+          {/* <div className="  h-full  md:opacity-90 bg-blend-overlay w-full"></div> */}
+          <div className="flex justify-center md:p-0  mt-20 p-1 mb-2 absolute md:inset-1">
+            <div className=" z-10 md:mt-10    md:bg-[#00000000] bg-[#6cbacf00] w-full h-full shadow-2xl hover:shadow-[#4c84e5] rounded-3xl border-2 border-[#ffffff65] hover:border-white transition duration-300 ease-in-out  backdrop-blur-xl md:w-2/3 md:h-full overflow-hidden">
               <div className=" md:p-0 p-3 mx-auto">
                 <div className="max-w-3xl  mx-auto">
                   <h2
-                    className="md:font-italic font-scnditalic text-center
-                  md:text-7xl divide-red-500  md:p-10 p-6 text-5xl text-[#50ff90] tracking-tighter"
+                    className="md:font-Main font-Main text-center
+                  md:text-4xl divide-red-500  md:p-10 p-6 text-2xl text-[#5073ff] tracking-tighter"
                   >
                     Create your free account
                   </h2>
-                  <p className="md:mt-[25px] font-scnd text-center md:mb-[40px] text-xl text-[#ffffff] tracking-tight">
+                  <p className="  font-Main text-center   text-sm text-[#ffffff] tracking-tight">
                     Be the first one in this social and Nobel cause
                   </p>
-                  <form className="flex font-scnd flex-wrap md:p-0 p-3" >
+                  <form className="flex bg-yellw-500 font-Main mt-4 flex-wrap md:p-0 p-3" >
                     <div className="w-full md:w-1/2 p-3">
                       <label className="block">
                         <input
@@ -339,7 +339,7 @@ const SignupDonator = () => {
                                 <span className="text-sm  w-full md:text-md">
                                   <button
                                     onClick={handleClick}
-                                    className="text-white text-sm md:text-md hover:text-[#ff6060]"
+                                    className="text-white text-xs text-left md:text-md hover:text-[#ff6060]"
                                   >
                                     I agree to the Terms &amp; Conditions &amp;
                                     Privacy Policy
@@ -355,7 +355,7 @@ const SignupDonator = () => {
                       <button
                         type="button"
                         onClick={submitSignup}
-                        className=" translate-x-[10px] transform delay-50 bg-[#328cc141] ease-in inline-block rounded bg-primary border-2 md:hover:bg-[#73a9c8fe] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                        className=" translate-x-[10px] transform delay-50 bg-[#328cc141] ease-in inline-block rounded bg-primary border-2 md:hover:bg-[#73a9c8fe] px-7 pb-2.5 pt-3 text-sm font-Main uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                         data-te-ripple-init
                         data-te-ripple-color="light"
                       >
@@ -363,12 +363,12 @@ const SignupDonator = () => {
                       </button>
                       <br />
                     </div>
-                    <span className=" md:  p-3 font-scnd md:mt-[x0px] md:text-left text-center w-full h-full text-[#b1d1fa] tracking-tight">
+                    <span className=" md:  p-3 font-Main md:mt-[x0px] md:text-left text-center w-full h-full text-[#b1d1fa] tracking-tight">
                       <span>Already have an account?</span>
                       <button onClick={scrollToTop}>
                         <NavLink
                           to="/LoginDonator"
-                          className="text-[#bfbffd] hover:text-[#ff6464] gap-8 font-scnd font-bold transition duration-200"
+                          className="text-[#bfbffd] hover:text-[#2c2e63] gap-8   font-Main transition duration-200"
                         >
                           {" "}
                           Log In
@@ -380,13 +380,13 @@ const SignupDonator = () => {
               </div>
             </div>
           </div>
-        </div>
+        {/* </div> */}
         {/* <button
-          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-green-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
+          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-blue-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
        rounded-full bg-[#23b668] absolute"
         >
           <NavLink to="/">
-            <h1 className=" font-SourceSansPro font-semibold text-xl">Back</h1>
+            <h1 className=" font-Main font-Main text-xl">Back</h1>
           </NavLink>
         </button> */}
       </motion.div>

@@ -83,7 +83,7 @@ const EditNgo = () => {
                   onClick={() => {
                     toast.dismiss();
                   }}
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md mx-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md mx-2"
                 >
                   Cancel
                 </button>
@@ -125,12 +125,12 @@ const EditNgo = () => {
         </div>
         <div className=" absolute inset-1">
 <div className="body py-20">
-          <div className="font-scnd font-bold">
+          <div className="font-Main font-bold">
            
 
             <div className="bg-[#ffffff00] border-2 border-[#686767] hover:border-[#c5c4c4] transition ease-in-out backdrop-blur-lg md:mx-40 mx-4 rounded-xl md:px-10 px-4 ">
               <div>
-                <h1 className="text-3xl text-center font-scnd font-bold leading-tight tracking-tight md:p-10 text-gray-100 md:text-2xl dark:text-white">
+                <h1 className="text-3xl text-center font-Main font-bold leading-tight tracking-tight md:p-10 text-gray-100 md:text-2xl dark:text-white">
                   Edit your Details
                 </h1>
                 <div className="input">
@@ -249,7 +249,7 @@ const EditNgo = () => {
                     
                     <button
                     type='submit'
-                    className="w-full bg-green-600 text-white bg-primary-600 hover:bg-green-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    className="w-full bg-blue-600 text-white bg-primary-600 hover:bg-blue-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   >
                     Update an account
                   </button>
@@ -270,7 +270,7 @@ const EditNgo = () => {
                 </div>
                  <div className="md:px-36 flex md:justify-start justify-center p-6">
                 
-                  <button className="font-scnd">
+                  <button className="font-Main">
                     <NavLink
                       to="/"
                       className="inline-flex px-4 items-center justify-center md:translate-x-[350px] h-10 md:w-[150px] md:translate-y-[20px] text-md font-semibold text-center text-white no-underline align-middle transition-all duration-300 ease-in-out hover:bg-[#001a804c] bg-transparent border-2 border-blue-600 border-solid rounded-full cursor-pointer select-none hover:text-gray-100 md:mb-8 hover:border-[white] focus:shadow-xs focus:no-underline"

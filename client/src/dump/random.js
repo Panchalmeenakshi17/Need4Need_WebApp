@@ -12,7 +12,7 @@
             </h1>
           </div>
           <button
-          className=" w-full md:mt-0 mt-20 md:w-[100px] md:h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-green-700 md:hover:text-white md:translate-x-[1400px] md:translate-y-[150px] 
+          className=" w-full md:mt-0 mt-20 md:w-[100px] md:h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-blue-700 md:hover:text-white md:translate-x-[1400px] md:translate-y-[150px] 
        rounded-full bg-[#23b668] absolute"
         >
           <NavLink to="/Herosection">

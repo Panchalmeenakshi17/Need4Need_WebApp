@@ -16,26 +16,26 @@ const App = () => {
     <>
 
     
-    <div className="md:translate-y-[450px] translate-y-[1900px] font-scnd">
+    <div className="md:translate-y-[450px] bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200 translate-y-[1900px] font-Main">
       
-      <div className="relative mt-1 ">
+      <div className=" mt-1 bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-indigo-200 via-gray-400 to-indigo-200 ">
         <div className="">
-          <img
+          {/* <img
             src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="  w-full md:w-full h-full md:h-full"
             alt="not found"
-          />
+          /> */}
         </div>
-        <div className="absolute inset-1">
-        <div className="w-full md:mt-20 mt-10 text-center">
-        <h1 className="text-4xl font-bold md:drop-shadow-[4px_3px_var(--tw-shadow-color)] shadow-[#7ec9f1] md:text-6xl md:p-3  p-7 ">
+        <div className=" inset-1">
+        <div className="w-full md:mt- mt-0 text-center">
+        <h1 className="text-3xl font-bold md:drop-shadow-[4px_3px_var(--tw-shadow-color)] shadow-[#7ec9f1] md:text-4xl md:p-3  p-7 ">
         <Fade bottom distance="20%">
 
-          Get a Chance to be Featured with us!
+          <h2 className=" md:mt-20 ">Get a Chance to get Featured with us!</h2>
         </Fade>
         </h1>
       </div>
-          <div className="md:flex justify-center gap-16 md:p-20 md:mt-10">
+          <div className="md:flex p-3 justify-center gap-16 md:p-20 md:mt-0">
             <div className="md:grid md:grid-cols-2  gap-12">
 
           
@@ -43,11 +43,11 @@ const App = () => {
               {Featured_Data.map((Details) => (
                 <div key={Details.id}>
                   <HoverVideoPlayer
-                    videoSrc={Details.video}
-                    className="md:w-full  mt-10 hover:border-4 backdrop-filter backdrop-blur-lg
-                       border-[#ffffff] shadow-black shadow-2xl hover:shadow-[#9dffa4]  hover:-translate-y-5 cursor-pointer transition ease-in-out"
+                    // videoSrc={Details.video}
+                    className="md:w-[600px]  mt-10  backdrop-filter backdrop-blur-lg
+                         shadow-black shadow-2xl hover:shadow-[#8890ff] cursor-pointer transition ease-in-out"
                     pausedOverlay={<PausedOverlay img={Details.img} alt={Details.alt} name={Details.name} />}
-                    loadingOverlay={<LoadingOverlay />}
+                    // loadingOverlay={<LoadingOverlay />}
                   />
                 </div>
               ))}

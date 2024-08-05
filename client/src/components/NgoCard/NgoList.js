@@ -58,7 +58,7 @@ const NgoList = () => {
   return (
     <>
       <motion.div
-        className=" md:h-[2800px] h-[4600px] bg-[#000000]  "
+        className=" md:h-[2800px] h-[8000px] md:-mt-20 -mt-20 bg-[#000000]  "
         initial={{ opacity: 0 }}
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
@@ -67,7 +67,7 @@ const NgoList = () => {
           <div className=" relative">
             <div className="">
               <img
-                src="https://images.unsplash.com/photo-1655637389009-81207e99c3c6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1659469377768-4f42f2f091c5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="bg-repeat-y w-full md:w-full h-full md:h-full"
                 alt="not found"
               />
@@ -75,12 +75,12 @@ const NgoList = () => {
 
             <div className=" absolute inset-1 flex justify-center ">
               <div className="projectPage-container">
-                <div className=" w-full  ">
+                <div className=" w-full mt-20  ">
                   <Link to="/services">
                     <div className=" p-2">
-                      <AiOutlineHome className=" bg-white hover:bg-[#3fffac8c] transition ease-in-out w-10 h-10 rounded-full shadow-inner shadow-black p-2" />
+                      <AiOutlineHome className=" bg-white hover:bg-[#7a98f1f1] transition ease-in-out w-10 h-10 rounded-full shadow-inner shadow-black p-2" />
                     </div>
-                    <h1 className=" text-3xl md:mt-0 mt-4 md:text-5xl w-full font-scnd text-center text-[#54d79e] ">
+                    <h1 className=" text-3xl md:mt-0 mt-4 md:text-5xl w-full font-Main text-center text-[#7577ff] ">
                       Here are the NGOs Registered with us
                     </h1>
                   </Link>

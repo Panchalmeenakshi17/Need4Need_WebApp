@@ -20,17 +20,17 @@ SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const ColSwipe = () => {
   return (
     <>
-      <div className="  md:mt-36 mt-10 font-scnd  w-full md:py-   ">
+      <div className="  md:mt-20 mt-10 font-Main  w-full md:py-   ">
         {/* <hr className="md:w-[1000px] md:h-[2px] md:my-8 md:translate-y-[0px] md:translate-x-[255px] bg-gray-200 border-0 dark:bg-[#000000]" /> */}
         <Fade bottom distance="20%">
         
-        <h1 className="md:absolute w-full text-center  md:text-5xl text-gray-900  text-2xl  md:p-5 md:px-8 p-2 dark:text-white dark:bg-[#059669] hover:text-black ">
+        <h1 className="md:absolute w-full text-center  md:text-4xl text-gray-900  text-2xl  md:p-5 md:px-8 p-2 dark:text-white dark:bg-[#059669] hover:text-black ">
           <b> Know about the services we provide to the arising problems </b>
         </h1>
         </Fade>
       </div>
 
-      <div className=" mt-5 md:p-40 md:translate-y-10 p-3 w-full">
+      <div className=" mt-5 md:p-40 md:tran0 p-3 w-full">
          <Swiper spaceBetween={10} centeredSlides={true}
              autoplay={{ delay: 1000, disableOnInteraction: false, reverseDirection : false}}
              pagination={{ clickable: true, }}

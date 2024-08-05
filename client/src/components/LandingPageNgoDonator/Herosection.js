@@ -56,7 +56,7 @@ const Herosection = () => {
             <div className="  absolute   inset-1 ">
               <div className="relative mt-24 md:flex md:justify-center ">
                 <div className=" md:p-0 p-3 ">
-                  <h1 className="relative md:p-12 p-5 md:translate-y-0 -translate-y-[100px] z-10 md:w border-2 border-[#a571a5] md:text-5xl md:h-[280px] md:w-[900px] rounded-xl md:rounded-3xl w-full  text-[#bca0de] md:text-[#b8b7e2] font-scnd font-text-lg md:font-light text-left bg-[a571a540] filter backdrop-blur-md">
+                  <h1 className="relative md:p-12 p-5 md:translate-y-0 -translate-y-[100px] z-10 md:w border-2 border-[#a571a5] md:text-5xl md:h-[280px] md:w-[900px] rounded-xl md:rounded-3xl w-full  text-[#bca0de] md:text-[#b8b7e2] font-Main font-text-lg md:font-light text-left bg-[a571a540] filter backdrop-blur-md">
                     Let's take a step forward in the initiative in preventing
                     food wastage and supply it to the needy one
                   </h1>
@@ -67,7 +67,7 @@ const Herosection = () => {
                     >
                       <span className="w-full h-full bg-gradient-to-br from-[#462a4f] via-[#764785] to-[#706dde] group-hover:from-[#0403283c] group-hover:via-[#0b33073f] group-hover:to-[#76478564] group-hover:border-[#c26cdf] group-hover:border-4 absolute"></span>
                       <span className="relative px-[10px] py-[5px] md:px-20 md:py-3 transition-all ease-out bg-[#030f07] rounded-md group-hover:bg-opacity-20 duration-400">
-                        <span className="relative md:px-10 font-scnd text-sm md:text-lg text-white">
+                        <span className="relative md:px-10 font-Main text-sm md:text-lg text-white">
                           Donate
                         </span>
                       </span>

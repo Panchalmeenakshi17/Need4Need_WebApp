@@ -11,7 +11,7 @@ import Explainhome from "./components/LandingPageNgoDonator/Explainhome";
 import Solution from "./components/LandingPageNgoDonator/Solution";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Login from "./dump/Login";
-import ClockLoader from "react-spinners/ClockLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 import First from "./components/OpeningPage/First";
 import Ngomain from "./components/LandingPageNgoDonator/Ngomain";
 import Ngoregister from "../src/Screens/Ngo/Ngoregister";
@@ -65,11 +65,12 @@ const App = () => {
 <Router>
       {Loading ? (
         <div id="toTop" className="App">
-          <ClockLoader
+          <PulseLoader
+
             color={"#007fee"}
             loading={Loading}
-            className=" w-[300px] h- "
-            size={300}
+            className="  "
+            size={10}
             aria-label="Loading Spinner"
             data-testid="loader"
           />

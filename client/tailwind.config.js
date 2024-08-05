@@ -14,6 +14,7 @@ module.exports = {
         SourceSansPro: ["Source Sans Pro", "sans-serif"],
         italic:["WindSong", "cursive"],
         scnditalic: ["Great Vibes", "cursive"],
+        Main: ["Poppins", "sans-serif"],
       },
     },
   },

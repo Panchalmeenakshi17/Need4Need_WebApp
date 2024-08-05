@@ -53,35 +53,35 @@ const LoginNgo = () => {
   return (
     <>
       <motion.div
-        className=" bg-[#000000ff] md:h-0 h-[800px]  "
+        className="bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-gray-500 via-blue-500 to-indigo-900 md:-mt-20 -mt-20   "
         initial={{ opacity: 0 }}
         animate={{ opacity: 5 }}
         exit={{ opacity: 0 }}
       >
-        <div className="relative">
-          <img
+        <div className=" ">
+          {/* <img
             src="https://images.unsplash.com/photo-1698728877137-963bca5b5310?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className=" h-full md:w-full "
             alt="not found"
-          />
-          <div className=" absolute flex justify-center inset-1 ">
+          /> */}
+          <div className="   flex justify-center inset-1 ">
             <div className="h-full   w-full  text-white ">
               <div className="h-full flex justify-center w-full ">
-                <div className="flex h-full md:h-1/2 w-full md:w-1/2 justify-center font-scnd">
+                <div className="flex  md:py-0 py-20  md:p-0 p-5 h-full md:h-1/2 w-full md:w-1/2 justify-center font-Main">
                   <div
                     id="aboutTop"
-                    className="mt-36 md:mt- w-full backdrop-blur-lg border-2  h-full md:w-full md:p-20 md:h-[500px]"
+                    className="mt-36 md:mb-20 w-full backdrop-blur-lg border-2  h-full md:w-full md:p-20 "
                     style={{
                       border: "2px solid",
                       borderImage:
-                        "linear-gradient(to right, #3498db, #2ecc71)",
+                        "linear-gradient(to right, #3498db, #ffffff)",
                       borderImageSlice: 1,
                       borderRadius: "45px",
                     }}
                   >
                     <form className=" md:p-0 p-10 w-full h-full " action="POST">
                       <div className=" ">
-                        <h2 className=" text-center font-scnd  text-5xl md:text-6xl text-[#7aff4d] tracking-tighter">
+                        <h2 className=" text-center font-Main  text-2xl md:text-4xl text-[#dee0ff] tracking-tighter">
                           Login to your NGO Account
                         </h2>
                       </div>{" "}
@@ -94,7 +94,7 @@ const LoginNgo = () => {
                             type="email"
                             value={Ngoemail}
                             onChange={(e) => setNgoemail(e.target.value)}
-                            className="md:p-4 p-3  text-[#ffffff] tracking-tight  w-full h-full bg-[#ffffff49] md:w-[500px] placeholder:text-white outline-none border border-gray-200 rounded-lg focus:border-green-500 transition duration-200"
+                            className="md:p-4 p-3  text-[#ffffff] tracking-tight  w-full h-full bg-[#ffffff49] md:w-[500px] placeholder:text-white outline-none border border-gray-200 rounded-lg focus:border-blue-500 transition duration-200"
                             placeholder="Email address*"
                           />
                           <label
@@ -111,7 +111,7 @@ const LoginNgo = () => {
                               type={isPasswordVisible ? "text" : "password"}
                               value={Ngopassword}
                               onChange={(e) => setNgopassword(e.target.value)}
-                              className="md:p-4 p-3 w-full h-full  text-[#ffffff] tracking-tight - bg-[#ffffff49] md:w-[500px] placeholder:text-white outline-none border border-gray-200 rounded-lg focus:border-green-500  transition duration-200"
+                              className="md:p-4 p-3 w-full h-full  text-[#ffffff] tracking-tight - bg-[#ffffff49] md:w-[500px] placeholder:text-white outline-none border border-gray-200 rounded-lg focus:border-blue-500  transition duration-200"
                               id="exampleFormControlInput22"
                               placeholder="Password*"
                             />
@@ -162,7 +162,7 @@ const LoginNgo = () => {
                           <button
                             type="button"
                             onClick={submitHandler}
-                            className="  transform delay-50 bg-[#468a599b] ease-in inline-block rounded bg-primary border-2 md:hover:bg-[#273c2d9b] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            className=" w-full  transform delay-50 bg-[#96abf99b] ease-in inline-block rounded-full bg-primary border-2 md:hover:bg-[#96b1ffe4] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                             data-te-ripple-init
                             data-te-ripple-color="light"
                           >
@@ -170,19 +170,19 @@ const LoginNgo = () => {
                           </button>
                         </div>
                         <br />
-                      </div>
-                    </form>
-                    <div className=" md:mt-[40px] mt-64 flex justify-center w-full h-full  ">
-                      <span className="  font-scnd  text-[#f8fbff] tracking-tight">
+                    <div className=" md:mt-[0px] flex justify-center w-full h-full  ">
+                      <span className="  font-Main  text-[#f8fbff] tracking-tight">
                         <span>Don't have an account?</span>
                         <NavLink
                           to="/SignupNGO"
-                          className="text-[#7979bb] hover:text-[#ff2424] gap-8 font-SourceSansPro font-bold transition duration-200"
+                          className="text-[#b6b6ff] hover:text-[#ff2424] gap-8 font-Main font- transition duration-200"
                         >
                           Sign Up
                         </NavLink>
                       </span>
                     </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const LoginNgo = () => {
         </div>
 
         {/* <button
-          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-green-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
+          className=" md:w-[100px] h-[40px] animate-pulse transform ease-in-out duration-300  shadow-[#76d46a] shadow-md md:hover:bg-blue-700 md:hover:text-white md:translate-x-[1350px] -mt-[80px] 
        rounded-full bg-[#23b668] absolute"
         >
           <NavLink to="/">

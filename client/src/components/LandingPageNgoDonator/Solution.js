@@ -30,7 +30,7 @@ const Solution = () => {
           <div className="">
       <Fade bottom distance="20%">
 
-            <h1 className="text-[#48abb2] -mt-[200px] md:w-[680px] md:ml-[100px] md:mt-[80px] md:text-7xl text-2xl  text-center md:text-right font-bold   flex justify-center font-scnd items-center">
+            <h1 className="text-[#48abb2] -mt-[200px] md:w-[680px] md:ml-[100px] md:mt-[80px] md:text-7xl text-2xl  text-center md:text-right font-bold   flex justify-center font-Main items-center">
               But every problem has a cure
             </h1>
             </Fade>

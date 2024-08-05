@@ -12,25 +12,25 @@ const First = () => {
   return (
     <>
       <motion.div
-        className="bg-[#000002] w-full md:h-full h-[840px] "
+        className="bg-[#000002]  md:-mt-20  w-full md:h-full h-full "
         initial={{ opacity: 0 }}
         animate={{ opacity: 6 }}
         exit={{ opacity: 0 }}
       >
-        <div className=" relative">
+        <div className=" bg-black ">
           <div className="">
-            <img
+            {/* <img
               src="https://images.unsplash.com/photo-1510906594845-bc082582c8cc?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               className=" md:h-[750px] w-full "
               alt="not found"
-            />
+            /> */}
           </div>
 
-          <div className=" md:p-0 p-3 inset-1 mt-[150px] md:mt-[100px] absolute ">
+          <div className=" w-full h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black md:p-0 p-3  -mt-[80px] md:mt-0  ">
             <div className="flex justify-center ">
              
-            <div className="custom-border border-2 hover:border-[#5674b6] hover:shadow-2xl hover:shadow-[#49557e] font-scnd w-full md:w-[900px] md:rounded-3xl duration-300 md:p-20 p-7 border-gray-800  hover:brightness-110 filter backdrop-blur-md bg-[#00000050]" >
-                <h1 className="md:text-5xl text-white text-3xl text-center">
+            <div className="  md:mb-20 md:mt-28 mt-20 font-Main w-full md:w-2/3 md:rounded-3xl duration-300 md:p-16 p-7  filter backdrop-blur-md " >
+                <h1 className="md:text-4xl text-white text-3xl text-center">
                   <Fade>
                     Please tell us Who <h2>are you before moving forward :)</h2>
                   </Fade>
@@ -42,22 +42,22 @@ const First = () => {
                     <button onClick={scrollToTop}>
                       <NavLink
                         to="/Ngoregister"
-                        className="relative border-2 border-[#a2a1a1]   transition ease-in-out bg-[#c0bccf4a]  shadow-black inline-flex items-center hover:shadow-xl hover:shadow-[#71b188cb] hover:border-green-500 hover:bg-[#aafeaa18]  hover:-translate-y-10  md:h-[175px]  justify-center   overflow-hidden font-bold text-white w-full rounded-2xl shadow-2xl group"
+                        className="relative  transition ease-in-out bg-[#c0bccf4b] hover:bg-[#c0bccf71]  shadow-black inline-flex items-center hover:shadow-xl   md:h-[175px]  justify-center   overflow-hidden font-semibold text-white w-full rounded-2xl shadow-2xl group"
                       >
-                        <h1 className="p-12   text-center md:text-3xl text-xl font-scnd relative">
+                        <h1 className="p-12   text-center md:text-2xl text-xl font-Main relative">
                          Connection with NGO
                         </h1>
                       </NavLink>
 
                     </button>
                     </div>
-                    <div className=" text-center md:mt-0 mt-16  w-full    rounded-full  ">
+                    <div className=" text-center md:mt-0 mt-16  w-full   rounded-full  ">
                     <button onClick={scrollToTop}>
                     <NavLink
                         to="/DonateDirect"
-                        className="relative border-2 border-[#a2a1a1]   transition ease-in-out bg-[#c0bccf4a]  shadow-black inline-flex items-center hover:shadow-xl hover:shadow-[#71b188cb] hover:border-green-500 hover:bg-[#aafeaa18]  hover:-translate-y-10  md:h-[175px]  justify-center   overflow-hidden font-bold text-white w-full rounded-2xl shadow-2xl group"
+                        className="relative transition ease-in-out bg-[#c0bccf4a] hover:bg-[#c0bccf71] shadow-black inline-flex items-center hover:shadow-xl  md:h-[175px]  justify-center md:py-0 py-6  overflow-hidden font-semibold text-white w-full rounded-2xl shadow-2xl group"
                       >
-                        <h1 className="p-12   text-center md:text-3xl text-xl font-scnd relative">
+                        <h1 className="p-5 text-center md:text-2xl text-xl font-Main relative">
                         Donate without Registering
                         </h1>
                       </NavLink>
@@ -65,7 +65,7 @@ const First = () => {
                         to="/DonateDirect"
                         className="relative border-2 border-[#a2a1a1] hover:bg-[#94c0d919] transition ease-in-out bg-[#c0bccf4a]  shadow-black inline-flex items-center hover:shadow-xl hover:shadow-[#7396b3cb]  hover:-translate-y-10      justify-center  overflow-hidden font-bold text-white w-full rounded-2xl shadow-2xl group"
                       >
-                        <h1 className="p-8  text-center md:text-3xl text-xl font-scnd relative">
+                        <h1 className="p-8  text-center md:text-3xl text-xl font-Main relative">
                          Donate without Registering
                         </h1>
                       </NavLink> */}

@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
-
+app.use('/api/user',require('./routes/contactRoutes'));
 app.use('/api/ngo',require('./routes/ngoRoutes'));
 app.use('/api/donator',require('./routes/donatorRoutes'));
 app.use('/api/adminlogin', require('./routes/adminRoutes'));

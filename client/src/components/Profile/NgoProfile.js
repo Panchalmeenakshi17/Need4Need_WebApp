@@ -65,11 +65,11 @@ const NgoProfile = () => {
               animate={{ opacity: 5 }}
               exit={{ opacity: 0 }}
             >
-              <div className="font-scnd  w-full   justify-center   absolute mt-10 left-0">
+              <div className="font-Main  w-full   justify-center   absolute mt-10 left-0">
                 <div className="md:flex  md:flex-row flex-col md:space-y-0 space-y-10 md:justify-center">
                   <div className="md:w-1/2 w-full md:px-0 px-4  flex justify-center">
-                    <div className="bg-[#00000077] shadow-[#78b774] shadow-md border-2 border-green-300 text-white flex flex-col gap-10 py-10 p-10 rounded-3xl  text-left text-2xl md:w-full w-full items-center">
-                      <h1 className="md:text-5xl text-4xl text-green-400  ">
+                    <div className="bg-[#00000077] shadow-[#78b774] shadow-md border-2 border-blue-300 text-white flex flex-col gap-10 py-10 p-10 rounded-3xl  text-left text-2xl md:w-full w-full items-center">
+                      <h1 className="md:text-5xl text-4xl text-blue-400  ">
                         Your NGO Profile
                       </h1>
                       <img
